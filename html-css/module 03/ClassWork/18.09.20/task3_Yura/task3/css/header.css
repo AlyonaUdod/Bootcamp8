@@ -1,0 +1,40 @@
+@import url(main.css);
+*{
+    margin: 0;
+    padding: 0;
+}
+.menu-item{
+    display: inline;
+    /* float: right; */
+    padding-left: 30px;
+
+}
+
+.clear-fix::after{
+    content: "";
+    clear: both;
+    display: table;
+
+}
+.header{
+    padding: 40px 190px 0 95px;
+}
+.logo{
+    float: left;
+}
+.menu{
+    float: right;
+}
+a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+a:hover{
+    color: blue;
+}
+.bg{
+    background-image: url(../img/11.jpg);
+    height: 670px;
+    background-size: 100% 100%;
+}

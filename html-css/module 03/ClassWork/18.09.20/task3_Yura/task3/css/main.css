@@ -1,0 +1,32 @@
+@import url(section.css);
+.text{
+    width: 365px;
+    float: right;
+
+}
+title{
+    line-height: 40px;
+
+}
+.title-p{
+    line-height: 20px;
+    padding-top: 20px;
+}
+.section{
+    padding-top: 150px;
+    padding-right: 150px;
+}
+/* .font2{
+    width: 200px;
+    float: right;
+} */
+.title-a{
+        text-align: center;
+        margin-top: 40px;
+        padding: 20px 0px 20px 0px;
+        border: 0px solid black;
+        background: #39b4af;
+        color: white;
+        display: block;
+        width: 180px;
+     }

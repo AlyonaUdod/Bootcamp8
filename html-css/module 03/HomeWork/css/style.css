@@ -3,10 +3,126 @@
     padding: 0;
 }
 
+@font-face { 
+    font-family: PlayfairDisplay-Regular;
+    src: url('../fonts/Playfair_Display/PlayfairDisplay-Regular.ttf')
+ }
+
+ 
+@font-face { 
+    font-family: Ubuntu-Light;
+    src: url('../fonts/Ubuntu/Ubuntu-Light.ttf')
+ }
+  
+a {
+    text-decoration: none;
+ }
+
+ ul {
+    list-style: none;
+ }
+
+ img, a {
+    display: block;
+ }
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+   
 /* Header */
 
+.header {
+    width: 960px;
+    margin: auto;
+}
 
+.head-nav {
+    padding: 45px;
+}
+
+.head-nav-list-item {
+    float: left;
+}
+
+.head-nav-list-item a {
+    font-family: 'PlayfairDisplay-Regular', sans-serif;
+    font-size: 14px;
+    margin-left: 120px;
+    text-transform: uppercase;
+    color: black;
+    display: inline;
+    }
+    
+.head-nav-list-item:hover > a {
+    color: #03a9f4; } 
+    
+
+    
 /* Main */
+
+.main {
+    width: 960px ;
+    margin: auto;
+}
+
+.cont {
+    width: 420px;
+    margin: auto;
+    float: left;
+    padding: 30px ;
+}
+
+.cont-img {
+    width: 420px;
+    height: 280px;
+    padding-bottom: 30px;
+}
+
+.cont-fig {
+    padding-bottom: 30px;
+    font-family: 'Ubuntu-Light', sans-serif;
+    font-size: 14px;
+    color: #d9d6ce;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.cont-title {
+    font-family: 'PlayfairDisplay-Regular', sans-serif;
+    font-size: 28px;
+    color: #626262;
+    padding-bottom: 40px;
+}
+
+.cont-text {
+    font-family: 'PlayfairDisplay-Regular', sans-serif;
+    font-size: 14px;
+    color: #626262;
+}
 
 
 /*Footer */
+
+.bott {
+    margin: 20px auto 60px;
+    border: 1px black solid;
+    width: 165px;
+    padding: 22px 35px;
+    text-align: center;
+    font-family: 'PlayfairDisplay-Regular', sans-serif;
+    font-size: 20px;
+}
+
+.bott a {
+     color: #707070;
+}
+
+.bott:hover {
+    background-image: linear-gradient(to bottom right, #d9d6ce 0%,rgb(214, 197, 197) 100%);
+    border: 1px solid rgb(63, 63, 63);
+    box-shadow: 3px 3px 10px rgb(226, 129, 129); 
+}
+

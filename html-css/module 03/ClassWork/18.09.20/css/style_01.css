@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+font-family: Montserrat-Medium;
+src: url('../fonts/Montserrat/Montserrat-Medium.ttf') }
+
+@font-face {
+    font-family: NunitoSans-Regular;
+    src: url('../fonts/Nunito_Sans/NunitoSans-Regular.ttf')
+}
+
+@font-face {
+    font-family: WorkSans-Regular;
+    src: url('../fonts/Work_Sans/WorkSans-Regular.ttf')
+}
+
+
+a {
+ text-decoration: none;
+ }
+
+ ul {
+     list-style: none;
+ }
+
+ img, a {
+    display: block;
+ }
+
+.clearfix:after {
+      display: block;
+      content: "";
+      clear: both;
+}
+
+
+/*Part Header*/
+
+
+.header { 
+    width: 1366px;
+    margin: auto;
+}
+
+.nav-header {
+    width: 1170px;
+    margin: 38px auto;
+}
+
+.logo-img {
+    height: 25px;
+    width: 31px;
+}
+
+.logo, .menu-item {
+    float: left;
+}
+
+.menu-item a {
+    font-family: 'Montserrat-Medium', sans-serif;
+    margin-left: 30px;
+    font-style: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+}
+
+.header-menu {
+  float: right;
+ }
+
+.menu-item:hover > a {
+    color: #4ad1cc;
+}
+
+
+/*Part Main*/
+
+.main{
+   
+    margin: auto;
+    width: 1366px;
+    background: url('../img/img_10.png'), linear-gradient( to left,rgba(14, 247, 14, 0.5) 0%, rgba(57, 119, 255, 0.5) 100%);
+    background-blend-mode: multiply; 
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.main-cont {
+    padding-left: 100px; 
+    margin: auto;
+    margin-bottom: 0;
+    background: #f6f6f6;
+}
+
+.wraper {
+   background: url('../img/img_11.jpg');
+   background-repeat: repeat-x;
+   background-size: 30px;
+   
+}
+
+.main-cont-libr {
+     width: 580px; 
+     float: left;
+}
+
+.libr-title {
+    padding: 105px 0 0;
+    text-align: left;
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-size: 38px;
+    color: #171717;
+}
+
+.cont-libr-text{
+    width: 440px; 
+}
+
+.libr-text-main {
+    padding: 30px 0 0;
+    font-family: 'NunitoSans-Regular', sans-serif;
+    font-size: 16px;
+    color: #787878;
+    text-align: left;
+}
+
+.libr-text {
+    padding-top: 10px;
+    font-family: 'NunitoSans-Regular', sans-serif;
+    font-size: 16px;
+    color: #787878;
+    text-align: left;
+}
+
+.libr-info {
+   color: #3f2525;
+   font-weight: 600;
+}
+
+.libr-text-web {
+    display:inline;
+    color: #787878;
+}
+
+.libr-text-web:hover {
+    color: #4ad1cc;
+ }
+
+.libr-text-info {
+  margin-top: 45px;
+}
+
+.main-cont-right {
+     float: right; 
+     display: block;
+}
+
+.main-cont-img {
+    width: 685px;
+    height: 570px;
+}
+
+.main-navi-left {
+    float: left;
+    padding: 45px 0 25px 117px;    
+}
+
+.main-navi-text {
+    display: inline;
+    color: whitesmoke;
+    font-family:'Montserrat-Medium', sans-serif;
+    font-size: 12px;
+    text-align: left;
+}
+
+.main-navi-text-web {
+    display: inline;
+    text-transform: uppercase;
+    color: whitesmoke;
+    font-weight: 600;
+}
+
+.main-navi-text:hover > a {
+    color: #4ad1cc;
+ }
+
+.main-navi-center {
+    float: left;
+    padding-top: 38px;
+    margin-left: 417px;
+}
+
+.main-navi-right {
+    float: right;
+    padding: 45px 117px;
+ }
+.pfolio-title {
+    padding: 100px 0 30px;
+    text-align: center;
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-size: 40px;
+    color: #171717;
+}
+
+.pfolio-subtitle {
+    padding-bottom: 95px;
+    margin: auto;
+    text-align: center; 
+    font-family: 'NunitoSans-Regular', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    width: 512px;
+    color: #b9b9b9; 
+}
+
+
+
+/*Part Footer*/
+
+.footer {
+    background: #141414;
+    margin: auto;
+    width: 1366px;
+}
+
+.container {
+    width: 1170px;
+    margin:auto;
+    padding: 100px 0;
+}
+
+ .info-title { 
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-size: 18px;
+    color: #f9dfdf;
+    padding-bottom: 25px; 
+ }
+
+ .info, .contact, .footer-menu-item a{
+    font-family: 'NunitoSans-Regular', sans-serif;
+    font-size: 15px;
+    color: #bcbcbc;
+    float: left;
+ }
+
+ .info, .contact, .footer-nav-menu {
+     float: left;
+ }
+
+ .contacted {
+    margin-left: 246px;
+}
+
+.footer-nav-menu {
+    margin-left: 145px;
+}
+
+.news {
+    margin-left: 55px;
+}
+
+.social {
+    margin-left: 135px;
+}
+
+.footer-menu-item:hover > a {
+    color: #4ad1cc;
+ }
+
+
+
+ /*
+
+ button.expl:befor {
+     content: "1";
+     width: 35px;
+     height: 35px;
+     dislay: block;
+     position: absolute;
+     padding-top: 10px;
+     line-heigh: 10px;
+
+
+
+
+.ex:before {
+    content: "before";
+    font-size: 35px;

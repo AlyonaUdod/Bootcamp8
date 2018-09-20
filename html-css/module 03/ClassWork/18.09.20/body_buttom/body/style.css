@@ -1,0 +1,219 @@
+button.example {
+	height: 35px;
+	display: block;
+	font-family: Arial, "Helvetica", sans-serif;
+	font-size: 14px;
+	color: #fff;	
+	text-align: center;	
+	padding: 4px 20px 0;
+	margin: 10px auto;
+	position: relative;
+	cursor: pointer;
+	border: none;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+button.facebook {
+	border-left: solid 1px #2E4476;
+	background: #3B5999;	
+}
+
+button.twitter {
+	border-left: solid 1px #269BD0;
+	background: #46C1F6;
+}
+
+
+button.yahoo {
+	border-left: solid 1px #813781;
+	background: #A948A9;
+}
+
+.example:active {
+	top: 3px;
+}
+
+.facebook:active {
+	box-shadow: 0px 2px 0px 0px #2E4476;
+}
+
+.twitter:active {	
+	box-shadow: 0px 2px 0px 0px #269BD0;
+	color: #46C1F6;
+	background: #fff;
+}
+
+
+.yahoo:active {	
+	box-shadow: 0px 2px 0px 0px #813781;
+}
+
+
+.twitter:hover {
+	color: #46C1F6;
+	background: #fff;
+	border: none;
+}
+
+
+
+.ex{
+    border-radius: 5px;
+    border: none;
+	padding: 20px;
+	position: releative;
+}
+
+.ex:before {
+    content: "§";
+    font-size: 30px;
+    background-color: red;
+}
+
+.ex:after {
+    content: "♥";
+    font-size: 30px;
+    background-color: greenyellow;    
+}
+
+.exp img {
+	position: absolute;
+	display: none;
+	left: 50px;
+	width: 300px;	
+}
+
+.exp:hover img {
+	display: block;
+}
+
+.exp {
+	position: relative;
+	
+}
+
+
+
+.example:before {
+    content: "1";    
+	width: 35px;
+	height: 35px;
+	display: block;
+	position: absolute;
+	/* padding-top: 10px; */
+	line-height: 35px;
+    top: 0px;
+    left: -35px;
+	/* margin-left: -54px; */
+	font-size: 16px;
+	font-weight: bold;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.facebook:before {
+	border-right: solid 1px #2E4476;
+	background: #3B5999;	
+}
+
+.twitter:before {
+	border-right: solid 1px #269BD0;
+	background: #46C1F6;
+}
+
+.twitter:hover:before {
+	color: #46C1F6;
+	background: #fff;
+	border: none;
+}
+
+
+.yahoo:before {
+	border-right: solid 1px #813781;
+	background: #A948A9;
+}
+
+.example:active:before {
+	top: -3px;
+}
+
+.facebook:active:before {	
+	box-shadow: 0px 15px 0px 0px #2E4476, 6px 4px 2px rgba(0,0,0,0.3);
+}
+
+.twitter:active:before {
+	color: #46C1F6;
+	background: #fff;
+	box-shadow: 0px 5px 0px 0px #269BD0, 6px 4px 2px rgba(0,0,0,0.3);
+}
+
+
+
+button.yahoo:active:before {	
+	box-shadow: 0px 15px 0px 0px #813781;
+}
+
+
+/*
+button.example:active {
+	height: 135px;
+	display: block;
+	font-family: Arial, "Helvetica", sans-serif;
+	font-size: 44px;
+	color: red;	
+	text-align: center;	
+	padding: 4px 20px 0;
+	margin: 10px auto;
+	position: relative;
+	cursor: pointer;
+	border: none;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+} */
+
+
+button.pinterest {
+	border-left: solid 1px #C02B21;
+	background: #DE463B;
+}
+
+
+.pinterest:active {	
+	background: linear-gradient(to right bottom,blue 0%,red 100%) ;
+	background-size: cover;
+	background-blend-mode: multiply;
+	box-shadow: 0px 2px 0px 0px #C02B21;
+	height: 255px;
+	width: 255px;
+	padding: 4px 20px 0;
+	font-size: 44px;
+}
+
+.pinterest:after {
+		content: "";
+		background-image: url('./img/unicorn_01.jpg'); 
+		background-size: cover;
+	}
+
+	.example:active:after {
+		display: block;
+	}
+
+/*
+.pinterest:active:after {
+	display:block;
+}
+*/
+
+.pinterest:before {
+	border-right: solid 1px #C02B21;
+    background: #DE463B;
+}
+
+
+.pinterest:active:before {	
+	height: 255px;
+	background-image: linear-gradient(to right bottom,blue 0%,red 100%);
+	box-shadow: 0px 5px 0px 0px #C02B21, 6px 4px 2px rgba(0,0,0,0.3);
+}
