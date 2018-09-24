@@ -1,0 +1,32 @@
+@import url(header.css);
+@import url(main.css);
+@import url(shop.css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    display:block;
+}
+
+
+a:hover {
+    color:orange;
+}

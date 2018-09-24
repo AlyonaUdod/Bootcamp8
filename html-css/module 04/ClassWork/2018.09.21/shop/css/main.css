@@ -1,0 +1,93 @@
+.main {
+    width: 1540px;
+    margin: auto;
+    
+}
+
+.main-head {
+    width: 1540px;
+    margin: auto;
+    background: #e5e5e9;
+    
+}
+
+
+.main-head-full {
+    float: left;
+    width: 520px;
+    margin: 230px 0 0 285px;
+    line-height: 30px;
+    position: relative;
+}
+
+.main-head-title {
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    color: #ff5912;
+    font-size: 44px;
+}
+
+.main-head-cont {
+    color: #9399a0;
+}
+
+.main-head-cont-price {
+    margin-top: 60px;
+    width: 250px;
+}
+
+.main-head-cont-price-bold {
+    float: left;
+}
+
+.main-head-cont-bold, .main-head-cont-price-bold {
+    color: #3c4751;
+    font-weight: 900;
+}
+
+.main-head-cont-orange {
+    float: right; 
+    position: relative;
+    color: #ff5912;
+}
+
+.main-head-img {
+    float: right;
+    width: 650px;
+    height: 650px;
+    margin: auto;
+    background: url('../img/depositphotos_58674969-stock-photo-fashionable-girl-in-winter-knitted.jpg'), linear-gradient( to left,rgba(229, 229, 233, 0.7) 0%, rgba(229, 229, 233, 1) 100%);
+    background-blend-mode: darken; 
+    background-size: contain;
+    opacity: 0.4;
+}
+
+
+.main-head-full:before {   
+    content: "";
+    background-image: url('../img/Composed-layer@1X.png');
+    position: absolute;
+    width: 13px;
+    height: 90px;
+    display: block; 
+    left: -65px;
+    top: 50px;
+  
+}
+
+
+.main-head-cont-orange:before {
+    content: "";
+    background-image: url('../img/Cart_Ico@1X.png');
+    position: absolute;
+    width: 24px;
+    height: 17px;
+    display: block; 
+    left: -28px;
+    top: 5px;
+    float: right;
+}
+
+
+
+

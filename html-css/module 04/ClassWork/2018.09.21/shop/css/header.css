@@ -1,0 +1,114 @@
+.header {
+     width: 1540px;
+     margin:auto;   
+     
+}
+
+.wrapper {
+    border-bottom: 1px solid #eaeaed;
+}
+
+
+.head {
+    width: 1170px;
+    margin:auto;
+    padding: 25px 0; 
+}
+
+.head a {
+    color: #3c4751;
+}
+
+.head-left {
+    float:left;
+}
+
+.head-left-menu-item {
+    float: left;
+    margin-left: 25px;
+    margin-right: 40px;
+
+}
+
+.head-right {
+    float: right;
+}
+
+.head-right-menu-item {
+    float: left;
+    margin: 5px;
+ }
+
+.item-email {
+    position: relative;
+}
+
+.item-tel {
+    position: relative;
+}
+
+.item-email:before {
+    width: 18px;
+    height: 11px;
+    background-image: url(../img/Mail_Ico@1X.png);
+    content: "";
+    display: block;
+    position: absolute;
+    left: -25px;
+    top: 4px;
+}
+
+.item-tel:before {
+    width: 12px;
+    height: 12px;
+    background-image: url(../img/Phone_Ico@1X.png);
+    content: "";
+    display: block;
+    position: absolute;
+    left: -17px;
+    top: 4px;
+}
+
+
+
+.headnav{
+    width: 1170px;
+    margin: auto;
+}
+
+.headnav-logo {
+    padding: 20px 0;
+    float: left;
+}
+
+.headnav-left {
+    float: left;
+    padding: 55px 0;
+}
+
+.headnav-left-menu {
+    margin-left: 100px;
+
+}
+
+.headnav-left-menu-item {
+    float: left;
+    margin-right: 40px;
+}
+
+.headnav-right {
+    float:right; 
+    padding: 55px 0;
+}
+
+
+.headnav-right-menu-item {
+    float: left;
+    margin-left: 30px;
+    
+}
+
+
+.headnav-right-menu-item:last-child {
+    margin-top: -1px;
+}

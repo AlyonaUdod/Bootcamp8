@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Roboto-Black;
+    src: url('../fonts/Roboto/Roboto-Black.ttf')
+ }
+
+ @font-face {
+    font-family: OpenSans-SemiBold;
+    src: url('../fonts/Open_Sans/OpenSans-SemiBold.ttf')
+ }
+    
+ @font-face {
+    font-family: OpenSans-Regular;
+    src: url('../fonts/Open_Sans/OpenSans-Regular.ttf')
+ }
+    
+a {
+    text-decoration: none;
+}
+
+img, a {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Header */
+
+.header {
+    margin: auto;
+    width: 1115px;
+}
+
+
+.head-nav {
+    margin: auto;
+    width: 1115px;
+}
+
+.head-nav-logo {
+    float: left;
+    padding: 30px 0;
+}
+
+.head-nav-logo-img {
+    width: 78px;
+    height: 21px;
+}
+
+.head-nav-menu {
+    float: right;
+    padding: 38px 0;
+}
+
+.head-nav-menu-item {
+    float: left;
+    margin-left: 18px;
+    text-transform: uppercase;
+    font-family: 'Roboto-Black', sans-serif;
+    font-size: 14px;
+}
+
+.head-nav-menu-item-link {
+    color: #0f0101;
+}
+
+.head-nav-menu-item-link:hover {
+    color: #1abc9c;
+}
+
+/* Main */
+
+.main {
+    width: 1115px;
+    margin: 70px auto;
+}
+
+/* Shop */
+
+.shop-title {
+    width: 477px;
+    margin: auto;
+    padding-bottom: 70px;
+    font-family: 'Roboto-Black', sans-serif;
+    font-size: 46px;
+    color: rgba(81, 81, 81, 255);
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.shop-title:before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url('../img/Rectangle_8_copy_3@1X.png');
+    width: 164px;
+    height: 5px; 
+    left: 146px;
+    top: 75px; 
+}
+
+.shop-menu-item {
+    width: 255px;
+    float: left;
+    background:#e9f0fd ;
+    margin-top: 30px;
+    margin-right: 30px;  
+}
+
+.shop-menu-item:nth-child(4n) {
+    margin-right: 0px;
+}
+
+.shop-menu-item-img {
+    margin: auto;
+}
+
+.img_1 {
+    margin: -17px 0 0 -53px;
+    padding-bottom: 18px;
+}
+
+.img_2 {
+    padding-top: 22px;
+    padding-bottom: 14px;
+}
+
+.img_3 {
+    padding-top: 71px;
+    padding-bottom: 54px;
+}
+
+.img_4 {
+    padding-top: 48px;
+    padding-bottom: 30px;
+}
+
+.img_5 {
+    padding-top: 13px;
+    padding-bottom: 56px;
+}
+
+.img_6 {
+    padding-top: 51px;
+    padding-bottom: 51px;
+}
+
+.img_7 {
+    padding-top: 24px;
+    padding-bottom: 18px;
+}
+
+.img_8 {
+    padding-top: 97px;
+    padding-bottom: 87px;
+}
+
+.shmib {
+    background: #323232;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Roboto-Black', sans-serif;
+    font-size: 18px;
+}
+
+.shmib-left {
+    float: left;
+    padding: 14px;
+}
+
+.shmib-right {
+    float: right;
+    background: #8c8c8c;
+    padding: 14px;
+}
+
+.shop-menu-item:hover .shmib {
+    background: #1abc9c;
+}
+
+.shop-menu-item:hover .shmib-right {
+    background: #7fd9c7; 
+}
+
+/* News */
+
+.news {
+    width: 1115px;
+    margin: auto;
+}
+
+.news-title {
+    width: 477px;
+    margin: auto;
+    font-family: 'Roboto-Black', sans-serif;
+    font-size: 46px;
+    color: rgba(81, 81, 81, 255);
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    padding: 105px 0 105px;
+}
+
+.news-title:before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url('../img/Rectangle_8_copy_3@1X.png');
+    width: 164px;
+    height: 5px; 
+    left: 160px;
+    top: 180px; 
+}
+
+.news-menu-items {
+    float: left;
+    width: 350px;
+    margin-top: 30px;
+    margin-right: 30px; 
+    overflow: hidden;
+}
+
+.news-menu-items:last-child {
+    margin-right: 0;
+}
+
+.news-menu-title {
+    width: 300px;
+    font-family: 'OpenSans-Semibold', sans-serif;
+    font-size: 18px;  
+    color: #555252;
+    text-align: left;
+    padding: 15px 0 45px;
+    position: relative;
+}
+
+.news-menu-title:before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url('../img/Rectangle_8_copy_3@1X.png');
+    width: 136px;
+    height: 3px; 
+    top: 70px; 
+}
+
+.nmi-text {
+    width: 335px;
+    font-family: 'OpenSans-Regular', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555252;
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+.nmi-bottom {
+    width: 160px;
+    padding: 19px 0;
+    background: #1abc9c;
+}
+
+.nmi-bottom a {
+    text-align: center;
+    color: white;
+}
+
+.nmi-bottom:hover {
+    background: #7fd9c7;
+}

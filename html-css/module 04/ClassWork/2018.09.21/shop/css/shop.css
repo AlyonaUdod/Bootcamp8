@@ -1,0 +1,89 @@
+.shop {
+    width: 1540px; 
+    margin:auto;
+    background: #f4f6f8;
+    padding-bottom: 30px;
+}
+
+.shop-head {
+    width: 1170px;
+    margin: auto;
+}
+
+.shop-head-title {
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 120px;
+    font-weight: 900;
+}
+
+.sht-orang {
+    color:orange;
+}
+
+.shop-head-subtitle {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.first-line-shop {
+    padding-top: 125px;
+    width: 1170px;
+    margin: auto;
+}
+
+.shop-assorti {
+    width: 1170px; 
+}
+
+.shop-assorti-item {
+    width: 270px;
+    float: left;
+    background:white ;
+    margin-right: 30px;
+    padding-bottom: 30px;
+
+}
+
+.shop-assorti-item:last-child {
+    margin-right: 0;
+}
+
+.shop-assorti-img-item {
+   margin: auto;
+   display: block;
+
+}
+.shop-assorti-img {
+    padding: 30px 0;  
+   
+}
+
+.shop-assorti-img figcaption {
+    padding: 30px 0 10px; 
+    text-align: center;
+    font-weight: 900;
+}
+
+.shop-assorti-cont p {
+    text-align: center;
+    color: #ff5912;
+    font-weight: 900;
+}
+
+
+
+.goog {
+    width: 1170px;
+    margin: 80px auto;
+    background: white;
+    padding: 25px 0 ;
+
+}
+
+.goog-item-img {
+    width: 35px;
+    height: 8px;
+    margin: auto;
+}
+

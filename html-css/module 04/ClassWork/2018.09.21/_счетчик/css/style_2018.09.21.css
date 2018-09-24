@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    counter-reset: variable 66;
+}
+
+/*li {
+    counter-increment: variable;
+}
+*/
+
+li:before {
+    counter-increment: variable -5;
+    margin: 10px;
+    content: "Счетчик  : " counter(variable);
+}
+
+li {
+    margin: 30px;
+}
