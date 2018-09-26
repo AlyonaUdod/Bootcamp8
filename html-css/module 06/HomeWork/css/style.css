@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family:  Montserrat-Regular;
+    src: url('../fonts/Montserrat/Montserrat-Regular.ttf')
+}
+
+@font-face {
+    font-family:  Montserrat-Bold;
+    src: url('../fonts/Montserrat/Montserrat-Bold.ttf')
+}
+
+@font-face {
+    font-family: KaushanScript-Regular;
+    src: url('../fonts/Kaushan_Script/KaushanScript-Regular.ttf')
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url('../fonts/Roboto/Roboto-Regular.ttf')
+}
+
+@font-face {
+    font-family: Roboto-LightItalic;
+    src: url('../fonts/Roboto/Roboto-LightItalic.ttf')
+}
+
+ul {
+    list-style-type: none;
+}
+
+img, a {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+
+.header {
+    width: 1200px;
+    margin: auto;
+}
+
+.head-nav {
+     display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.head-nav-logo {
+    width: 68px;
+    padding: 30px 0;
+}
+
+.head-nav-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    width: 490px;
+    padding: 40px 0 20px;
+}
+
+.head-nav-menu a {
+    text-transform: uppercase;
+    color: #95e1d3;
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.head-nav-menu-item {
+    position: relative;
+}
+
+.head-nav-menu-item:hover a {
+    color: #f38181;
+}
+
+.head-nav-menu-item:after {
+    content: "";
+    position: absolute;
+    background: #f38181;
+    width: 100%;
+    height: 3px;
+    top: 22px;
+    display: block;
+    opacity: 0;
+    transition: opacity 200ms linear;
+}
+
+.head-nav-menu-item:hover:after {
+    opacity: 1;
+}
+
+/*Main*/
+
+.main {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* Info */
+
+.info {
+    width: 1200px;
+    padding: 0 30px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap; 
+    align-items: center;
+}  
+
+/* Title */
+
+.info-title, .team-title {
+    display: flex;
+    width: 315px;
+    justify-content: center;
+    flex-flow: row wrap; 
+    padding: 90px 0;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 30px;
+    color: #333333;
+    text-align: center;
+    text-transform: uppercase; 
+    position: relative;
+}
+
+.info-title:after, .team-title:after {
+    content: "";
+    position: absolute;
+    background: #f38181;
+    width: 60px;
+    height: 3px;
+    bottom: 68px;
+    display: block;
+    text-align: center;
+}
+
+.info-subtitle, .team-subtitle {
+    padding: 22px;
+    font-family: 'KaushanScript-Regular', sans-serif;
+    font-size: 24px;
+    color: #333333;
+    text-align: center;
+    font-weight: 100;
+    text-transform: none;
+}
+
+/* Menu */
+
+.info-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap; 
+    padding-top: 20px;
+}
+
+.info-menu-item {
+    width: 330px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.info-menu-item:nth-child(n+3) {
+    padding-bottom: 0;
+}
+
+
+.info-menu-item-title {
+    padding-left: 60px;
+    padding-bottom: 20px;
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-size: 14px;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+.info-menu-item-text {
+    padding-left: 60px;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 15px;
+    color: #b6b6b6;
+}
+
+
+.block_1:before {
+    content: "";
+    position: absolute;
+    background-image: url('../img/ALARM@1X.png');
+    width: 32px; 
+    height: 31px;
+    display: block;
+}
+
+.block_2:before {
+    content: "";
+    position: absolute;
+    background-image: url('../img/LINE_GRAPH@1X.png');
+    width: 32px;
+    height: 32px;
+    display: block; 
+}
+
+.block_3:before {
+    content: "";
+    position: absolute;
+    background-image: url('../img/COMPUTER_OK@1X.png');
+    width: 32px;
+    height: 28px;
+    display: block; 
+}
+
+.block_4:before {
+    content: "";
+    position: absolute;
+    background-image: url('../img/BOOK_2@1X.png');
+    width: 32px;
+    height: 32px;
+    display: block; 
+}
+
+.block_5:before {
+    content: "";
+    position: absolute;
+    background-image: url('../img/HOME@1X.png');
+    width: 32px;
+    height: 31px;
+    display: block; 
+}
+
+.block_6:before {
+    content: "";
+    position: absolute;
+    background-image: url('../img/IMAGE@1X.png');
+    width: 32px;
+    height: 31px;
+    display: block; 
+}
+
+/* Team */
+
+.team {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap; 
+    align-items: center;
+}  
+
+.team-text {
+    width: 941px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 15px;
+    color: #b6b6b6;
+    padding-bottom: 90px;
+}
+
+.team-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap; 
+    width: 1200px;
+    margin: auto;
+}
+
+.team-menu-item {
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.team-menu-item-title {
+    text-align: center;
+    padding: 30px 0 15px;
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-size: 14px;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+.team-menu-item-subtitle {
+    text-align: center;
+    font-family: 'Roboto-LightItalic', sans-serif;
+    font-size: 15px;
+    color: #999999;
+}
+
+/* Footer */
+
+.footer {
+    width: 1200px;
+    border-top: 1px solid #e5e5e5;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-input {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-copyright {
+    padding: 24px 0;
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-size: 14px;
+    color: #333333;
+}
+
+.footer-link {
+    padding: 24px 3px;
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-size: 14px;
+    color: #95e1d3;  
+    transition: color 200ms linear;
+}
+
+.footer-link:hover {
+    color: #f6a6a6;
+}
+
+.footer-input {
+    padding-top: 10px;
+    height: 45px;
+}
+
+.footer-input-info {
+    padding: 13px;
+    width: 230px;
+    border: 1px solid #e5e5e5;
+    font-family: 'Roboto-LightItalic', sans-serif;
+    font-size: 15px;
+    color: rgba(204, 204, 204, 255);
+    text-align: left;
+}
+
+.footer-input-bottom {
+    padding: 14px 33px;
+    background: #95e1d3;
+    border: 1px solid #e5e5e5;
+    border-left: 0px;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Hover Card's Menu */ 
+
+.color {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 384px;
+    padding: 210px 0;
+    background: linear-gradient(to bottom,rgba(238, 137, 137, 0.8)0%,rgba(237, 214, 135, 0.8) 100%);
+    box-shadow: 7px 7px 1px rgba(149, 225, 211, 0);
+    transition: opacity,
+                transform, box-shadow, 200ms linear;
+    opacity: 0;
+    transform: translateY(-555px);
+}
+
+.team-menu-item:hover > .color {
+    transform: translate(-9px,-119%);
+    opacity: 1;
+    box-shadow: 7px 7px 1px 1px rgba(149, 225, 211, 1);
+}
+
+.team-menu-img img {
+    transition: transform 200ms linear;
+}
+
+.team-menu-item:hover > .team-menu-img img{
+    transform: translate(-8px,-8px);
+}
+
+.color-menu { 
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    width: 224px;
+}
+
+.color-menu-item {
+    padding: 13px 15px;
+    background: #fce38a;
+    border-left: 1px solid rgba(238, 137, 137, 0.3);
+    transition: background-color 200ms linear;
+}
+
+.fb {
+    padding: 13px 21px;
+}
+
+.color-menu-item:hover {
+    background: #95e1d3;
+}
