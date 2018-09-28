@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Wisdom-Script;
+    src: url('../fonts/Wisdom-Script/wisdom_script_aj-webfont.woff')
+}
+
+@font-face {
+    font-family: Monserat-Bold;
+    src: url('../fonts/montserrat-v12-latin/montserrat-v12-latin-700.woff')
+}
+
+@font-face {
+    font-family: Monserat-Regular;
+    src: url('../fonts/montserrat-v12-latin/montserrat-v12-latin-600.woff')
+}
+
+@font-face {
+    font-family: DroidSerifItalic;
+    src: url('../fonts/DroidSerif-Italic/droidserif-italic-webfont.woff')
+}
+
+@font-face {
+    font-family: Roboto_Slab;
+    src: url('../fonts/roboto-slab-v7-latin/roboto-slab-v7-latin-regular.woff')
+}
+
+ul {
+    list-style-type: none;
+}
+
+a, img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+
+.header {
+    width: 1400px;
+    margin: auto;
+}
+
+.head {
+    width: 933px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.head-nav {
+    padding: 45px 0;
+}
+
+.head-nav a {
+    color: #fed136;
+    font-family: 'Wisdom-Script', sans-serif;
+    font-size: 26px;
+}
+
+.head-nav-menu {
+    display: flex;
+    width: 480px;
+    justify-content: space-between;
+}
+
+.head-nav-menu-item {
+    padding: 55px 0;
+}
+
+.head-nav-menu-item a {
+    color: #222222;
+    font-family: Monserat-Regular;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: color 200ms linear;
+}
+
+.head-nav-menu-item:hover a {
+    color: #fed136;
+}
+
+/* Main */
+
+.main {
+    width: 1400px;
+    margin: auto;
+}
+
+/* Info */
+
+.info {
+    width: 940px;
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.title {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.info-title {
+    text-transform: uppercase;
+    font-family: 'Roboto_Slab', 'Montserrat-Bold', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #222222;
+}
+
+.info-subtitle {
+    padding-top: 20px;
+    font-family: 'DroidSerifItalic', sans-serif;
+    font-size: 16px;
+    color: #777777;
+    font-weight: 300;
+}
+
+/* Content */
+
+.content {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-content {
+    text-align: center;
+    padding-top: 100px;
+    width: 274px;
+}
+
+.info-content-title {
+    font-family: 'Roboto_Slab', sans-serif;
+    color: #222222;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.info-content-subtitle {
+    padding-top: 20px;
+    font-family: 'Roboto_Slab', sans-serif;
+    font-size: 13px;
+    color: #777777;
+}
+
+.block_1 {
+    position: relative;
+}
+
+.block_1:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url('../img/Icon-Basket@1X.png');
+    background-repeat: no-repeat;
+    background-position: center; 
+    width: 68px;
+    height: 67px;
+    left: 103px;
+    top: 16px;
+    border: 3px solid #fed136;
+    border-radius: 100%;
+    animation: Anim_Before 5s linear infinite 0s;
+}
+
+.block_2 {
+    position: relative;
+}
+
+.block_2:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url('../img/Icon-Laptop@1X.png');
+    background-repeat: no-repeat;
+    background-position: center; 
+    width: 68px;
+    height: 67px;
+    left: 103px;
+    top: 16px;
+    border: 3px solid #fed136;
+    border-radius: 100%;
+    animation: Anim_Before 5s linear infinite 0s;
+}
+
+.block_3 {
+    position: relative;
+}
+
+.block_3:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url('../img/Icon-Locked@1X.png');
+    background-repeat: no-repeat;
+    background-position: center; 
+    width: 68px;
+    height: 67px;
+    left: 103px;
+    top: 16px;
+    border: 3px solid #fed136;
+    border-radius: 100%;
+    animation: Anim_Before 5s linear infinite 0s;
+}
+
+@keyframes  Anim_Before {
+    from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(360deg);
+      }
+}
+
+/* Contact */
+
+.contact {
+    margin-top: 100px;  
+    padding: 60px 0;
+    width: 1400px;
+    background-color: #222222;
+    background-image: url('../img/map-Image.png');
+    background-position: 100% 90%;
+    background-repeat: no-repeat;
+}
+
+.input {
+    width: 940px;
+    margin: auto;
+}
+
+.contact-title {
+    width: 260px;
+    margin: auto;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Roboto_Slab', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.contact-subtitle {
+    width: 300px;
+    margin: auto;
+    text-align: center; 
+    padding-top: 25px;
+    color: #777777;
+    font-family: 'DroidSerifItalic', sans-serif;
+    font-size: 16px;
+}
+
+/* Form */
+
+.form {
+    width: 940px;
+    margin: 60px auto 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.form-area {
+    width: 940px;
+    display: flex; 
+    justify-content: space-between;
+}
+
+.form-text {
+    width: 455px;
+}
+
+.form-menu-item {
+    margin-bottom: 30px; 
+}
+
+.form-menu-item:last-child {
+    margin-bottom: 0;
+}
+
+.form-menu-item-input {
+    width: 455px;
+    padding: 20px 0 18px 20px;
+    box-sizing: border-box;
+    font-family: 'Monserat-Bold', serif;
+    font-size: 13px;
+    color: #bbbbbb;
+    text-align: left;
+    border-radius: 4px;
+}
+
+.form-text {
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Monserat-Bold', sans-serif;
+    font-size: 13px;
+    color: #bbbbbb;
+    text-align: left;
+    border-radius: 4px;
+}
+
+input:invalid, .form-text:invalid {
+    border: 1px solid red;
+}
+
+input:valid, .form-text:valid {
+    border: 1px solid green;
+}
+
+input:invalid:focus, .form-text:invalid:focus {
+    background: #fdd; 
+    outline: none;
+   }
+
+input:valid:focus, .form-text:valid:focus  {
+    background: #dfd; 
+    outline: none;
+   }
+
+.form-menu-item-input::-webkit-input-placeholder,
+.form-text::-webkit-input-placeholder
+{ color: #bbbbbb; 
+  text-transform: uppercase;  }
+
+.form-button {
+    padding: 25px 47px;
+    margin-top: 30px;
+    width: 240px; 
+    background: #fed136;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Monserat-Bold', sans-serif;
+    font-size: 17px;
+    border-radius: 4px;
+}
