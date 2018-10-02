@@ -40,6 +40,10 @@ a {
     text-decoration: none;
 }
 
+input {
+    display: block;
+}
+
 /* Header */
 
 .header {

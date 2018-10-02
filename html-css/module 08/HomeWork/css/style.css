@@ -1,0 +1,31 @@
+@import url('./head.css');
+@import url('./team.css');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url('../fonts/montserrat-v12-latin/montserrat-v12-latin-700.woff');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url('../fonts/roboto-v18-latin/roboto-v18-latin-300.woff2');
+    font-weight: 300;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a, img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}

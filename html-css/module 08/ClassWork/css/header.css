@@ -1,0 +1,150 @@
+
+.header, .main {
+    width: 320px;
+    margin: auto;
+}
+
+.header-nav {
+    background-color: #373c3f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.header-title {
+    font-size: 16px;
+    margin-left: 5%;
+}
+
+.header-button {
+    width: 41px;
+    height: 37px;
+    display: block;
+    background-image: url('../img/crop@1X.png');
+    border: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-menu {
+    display: none;
+    position: absolute;
+    top: 37px;
+    right: 0;
+    list-style-type: none;
+    background: #373c3f;
+    width: 170px;
+}
+
+.header-menu-wr {
+    display: block;
+    position: relative;
+}
+
+.header-menu-wr:hover .header-menu {
+    display: block;
+}
+
+.header-menu-item, .header-title {
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    margin-left: 5%;
+}
+
+
+
+@media (min-width: 640px) {
+    
+.header {
+    width: calc(320px*2);
+}
+
+.header-button {
+    width: 82px;
+    height: 74px;
+}
+
+.header-menu {
+    top: calc(37px*2);
+    width: 352px;
+}
+
+.header-menu-item, .header-title {
+    padding: 5px;
+    font-size: 24px;
+}
+
+} 
+
+
+
+@media (min-width: 980px) {
+    .header {
+        width: 980px;
+    }
+
+    .header-button, .header-title   {
+        display: none;
+    }
+
+    
+    
+.header-menu {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 530px; 
+    padding: 45px 0 40px 54px;
+}
+
+.header-menu-item {
+    color: white;
+    margin-left: 0;
+    margin-right: 3px;
+    font-size: 12px;
+}
+
+
+.header-menu-wr:hover .header-menu {
+    display: flex;
+}
+
+}
+
+@media (min-width: 980px) {
+    .header {
+        width: 1024px;
+    }
+
+    .header-button, .header-title   {
+        display: none;
+    }
+
+    
+.header-menu {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 600px; 
+    padding: 60px;
+}
+
+.header-menu-item {
+    color: white;
+    margin-left: 0;
+    margin-right: 3px;
+    font-size: 16px;
+}
+
+
+.header-menu-wr:hover .header-menu {
+    display: flex;
+}
+
+}
+
