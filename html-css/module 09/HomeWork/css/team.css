@@ -1,0 +1,195 @@
+
+/* Team */
+
+.team {
+    margin: 68px auto 50px;
+    width: 322px;
+}
+
+.team-title {
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 22px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.team-menu {
+    margin: auto; 
+    /* display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap; */
+}
+
+.team-menu-item {
+    width: 200px;
+    margin-bottom: 23px;
+}
+
+.team-menu-img {
+    width: 121px;
+    border-radius: 100%;
+    margin: auto;
+}
+
+.team-menu-title {
+    margin-top: 20px;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 14px;
+    color: #333333;
+    text-align: center;
+}
+
+.team-menu-subtitle {
+    margin-top: 16px;
+    font-family: 'Roboto-Light', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    text-align: center;
+}
+
+/* .team-menu-item:nth-child(2){
+    order: 2;
+}
+
+.team-menu-item:nth-child(3){
+    order: 1;
+}
+
+.team-menu-item:nth-child(4){
+    order: 3;
+} */
+
+.photo_01, .photo_02, .photo_03, .photo_04 {
+    position: relative;
+}
+
+.photo_01:after {
+    position: absolute;
+    display: block;
+    content: "";
+    background-color: #ff4e50;
+    background-image: url('../img/Shape\ 128@1X.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    right: 43px;
+    bottom: 0;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.photo_02:after {
+    position: absolute;
+    display: block;
+    content: "";
+    background-color: #1cd7ad;
+    background-image: url('../img/Shape\ 153@1X.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    right: 43px;
+    bottom: 0;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.photo_03:after {
+    position: absolute;
+    display: block;
+    content: "";
+    background-color: #ffa507;
+    background-image: url('../img/Shape\ 155@1X.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    right: 43px;
+    bottom: 0;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.photo_04:after {
+    position: absolute;
+    display: block;
+    content: "";
+    background-color: #4e73db;
+    background-image: url('../img/Shape\ 170@1X.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    right: 43px;
+    bottom: 0;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.team-link {
+    border-radius: 35px;
+    border: 3px solid #ff4e50;
+    margin: auto ;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    width: 280px;
+}
+
+.team-link a {
+    color: #ff4e50; 
+    padding: 14px 0;
+}
+
+
+@media (min-width: 768px) {
+
+ /* Team */
+
+.team {
+    width: 768px;
+}
+
+.team-menu-item:nth-child(2){
+    order: 1;
+}
+
+.team-menu-item:nth-child(3){
+    order: 2;
+}
+
+.team-menu-item:nth-child(4){
+    order: 3;
+}
+
+.team-menu {
+    width: 500px;
+}
+
+.team-link {
+    width: 230px; 
+    margin-top: 10px;
+}
+}
+
+@media (min-width: 1440px) {
+        
+.team {
+    width: 1440px;
+}
+
+.team-menu {
+    margin: auto;
+    width: 914px;     
+}    
+
+.team-menu-item {
+    margin-right: 30px;
+}
+    
+.team-menu-item:last-child {
+    margin-right: 0;
+}
+}
