@@ -1,0 +1,74 @@
+.wrapper {
+    background-image: url('../img/photo-1433354359170-23a4ae7338c6@1X.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+.header {
+    padding: 225px 0;
+}
+
+.header-title {
+    font-family: 'Exo', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    font-weight: 100;
+}
+
+
+.play { 
+    background-position: center;
+    height: 59px;
+    border: none;
+    background-image: url('../img/Composed-layer@1X.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    margin-bottom: 43px;
+}
+
+.try_now {
+    background: #ff6d6d;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 400;
+    padding: 20px 50px;
+    color: white;
+    border: none;
+}
+
+.details {
+    font-family: 'Exo', sans-serif;
+    font-size: 14px;
+    color:white;
+    text-align: center;
+}
+
+.about {
+    padding: 190px 0 165px;
+    background-image: url('../img/crop@1X\ \(7\).png');
+    background-position: right;
+    background-repeat: no-repeat;
+    
+}
+
+.new-design {
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    color:#ff6d6d;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.about-title {
+    font-family: 'Exo', sans-serif;
+    font-size: 40px;
+    color: rgba(40, 40, 40);
+    font-weight: 500;
+}
+
+.about-text {
+    font-family: 'Exo', sans-serif;
+    font-size: 14px;
+    color: rgba(40, 40, 40);
+}

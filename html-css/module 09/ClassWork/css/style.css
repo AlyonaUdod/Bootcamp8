@@ -3,11 +3,6 @@
     color: white;
     height: 500px;
 }
-/* 
-.center {
-    display: flex;
-    justify-content: center;
-} */
 
 .row div:nth-child(odd) {
     background-color: rgb(238, 189, 189);
@@ -23,3 +18,5 @@
     min-height: 80px;
     text-align: center;
 }
+
+

@@ -1,0 +1,127 @@
+
+.head {
+    background: url('../img/Vector\ Smart\ Object@1X.png'), rgba(209, 209, 208, 0.6);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: auto;
+    width: 322px;
+    padding-bottom: 100px;
+}
+ 
+.nav {
+    padding-top: 23px;
+}
+
+.head-nav-menu-item-button {
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 35px;
+    outline: none;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 13px;
+    color: white;
+    text-align: center;
+    cursor: pointer;  
+    width: 92px;
+    padding: 10px 18px;
+}
+
+.head-nav-menu-item-button:hover {
+    border: 2px solid white;  
+}
+
+.head-link {
+    padding: 115px 0 0;
+    text-align: center;   
+}
+
+.head-link a{
+    color: white;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.title {
+    margin: 38px 0;
+}
+
+.title-title {
+     font-family: 'Montserrat-Bold', sans-serif;
+     font-size: 28px;
+     color: white;
+     text-align: center;
+     text-transform: uppercase;
+}
+
+.title-subtitle {
+    margin:20px 28px;  
+    font-family: 'Roboto-Light', sans-serif;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}
+
+.title-button {
+    margin: 19px auto;
+    background: #ff4e50;
+    border-radius: 35px;
+    border: 2px solid transparent;
+    width: 280px;
+}
+
+.title-button a {
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 13px;
+    color:white;
+    text-align: center; 
+    padding: 14px 0;
+}
+
+.title-button:hover {
+    border: 2px solid white;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+
+.container {
+    max-width: 914px;
+}
+
+.head {
+    width: 100%;
+    background: url('../img/Vector\ Smart\ Object@1X_02.png'), rgba(209, 209, 208, 0.6);
+    background-position: 50% 50%; 
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+.head-link {
+    padding-top: 3px;
+    margin-left: 30px;     
+}
+    
+.title {
+    margin: 162px 100px 70px;
+}
+
+.title-title {
+    font-size: 52px;
+}
+    
+.title-subtitle {
+    margin: 40px auto;  
+    font-size: 24px;
+}
+
+.title-button {
+    margin: 15px auto;
+    width: 226px;
+}
+}
