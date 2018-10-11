@@ -171,3 +171,20 @@ a {
 .footer-menu-item:hover > a {
     color: #4ad1cc;
  }
+
+
+ .icon-connection {
+     width: 100px;
+     height: 100px;
+     fill: green;
+ }
+
+ .icon-connection:hover {
+    fill: orange;
+     
+ }
+
+ .logo {
+     background: red;
+     padding: 10px;
+ }

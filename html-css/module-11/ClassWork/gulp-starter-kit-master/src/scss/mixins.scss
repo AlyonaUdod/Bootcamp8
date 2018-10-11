@@ -1,0 +1,20 @@
+@mixin block-options ($display: flex, $justify: space-between, $width: auto) {
+    display: $display;
+    justify-content: $justify;
+    width: $width;
+ }
+
+ @mixin font-style ($decoration: none, $weight: 400, $size: 20px) {
+     text-decoration: $decoration;
+     font-weight: $weight;
+     font-size: $size;
+ }
+
+ %features-item {
+    content: "";
+    width: 186px;
+    height: 186px;
+    display: block;
+    margin: auto;
+    margin-bottom: 28px;
+ }

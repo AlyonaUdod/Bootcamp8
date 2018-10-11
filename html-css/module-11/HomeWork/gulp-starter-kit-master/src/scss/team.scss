@@ -1,0 +1,88 @@
+.team {
+    width: 1200px;
+    margin: 90px auto;
+
+    &__title {
+        @extend %section-title;
+    }
+
+    &__subtitle {
+        @extend %section-subtitle;
+    }  
+
+    &__text {
+        width: 941px;
+        margin: 0 auto 90px;      
+        @include font-style ($family: 'Roboto' sans-serif);
+        text-align: center;
+        color: $text-text;
+        line-height: 1.6; 
+    }
+
+    &-list {
+        margin: auto;
+        @include block-options ($width: 1200px);
+        
+            &__item {
+                padding-bottom: 30px;
+                position: relative;
+                text-align: center;
+
+                &:hover > .team-animation {
+                    @include linear200 ($property: opacity transform box-shadow);
+                    transform: translate(-9px,-8.5px);
+                    opacity: 1;
+                    box-shadow: 7px 7px 1px 1px rgba(149, 225, 211, 1);
+                }
+
+                &:hover > .team-list__item-img img{
+                    @include linear200 ($property: transform);
+                    transform: translate(-8px,-8px);
+                }
+
+                &-title {            
+                    padding: 30px 0 15px;
+                    @include font-style ($size: 14px, $weight: 700);      
+                    color: $text-main;
+                    text-transform: uppercase;
+                }
+
+                &-subtitle {
+                    @include font-style ($family: 'Roboto' sans-serif, $weight: 300);
+                    font-style: italic;
+                    color: $text-text;
+                }
+            }
+    }
+}
+ 
+.team-animation {
+    padding: 209px 0;
+    @include block-options ($width: 384px, $justify: center);  
+    align-items: center;
+    position: absolute;
+    background: $gradient-man;
+    box-shadow: 7px 7px 1px rgba(149, 225, 211, 0); 
+    opacity: 0;
+    top: 0;
+    z-index: 100;
+
+        &-list {
+            @include block-options ($width: 224px, $justify: center);
+            
+                &__item-img {
+                    width: 25px;
+                    height: 25px;
+                    padding: 13px 15px;
+                    fill: $dawn;
+                    background: $sunrise;
+                    border-left: 1px solid rgba(238, 137, 137, 0.3);
+
+                        &:hover {
+                            @include linear200 ($property: background);
+                            background: $dawn;
+                            fill: $white;
+                        }
+                }
+        }
+}

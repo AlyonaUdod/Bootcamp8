@@ -1,0 +1,102 @@
+.header {
+    margin: auto;
+    width: 100%;
+    background-image: $gradient,url('/img/eagle.png');
+    background-size: cover;
+    background-blend-mode: normal;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            background-image: $gradient ,url('/img/eagle@2X.png');
+        }
+
+        &-nav {
+            @include block-options ($width:1200px);
+            margin: auto;
+            padding-top: 28px;
+
+             &-list {
+                @include block-options ();
+                padding-top: 12px;  
+
+                &__item {
+                    margin-right: 55px;
+
+                    &:last-child{
+                        margin-right: 0;
+                    }   
+
+                    &-icon {
+                        @extend %header-list-icon;
+
+                        &:hover {
+                            fill: $sunrise; 
+                            @include linear200 ($property: fill);
+                        }
+                    }
+                }
+
+                &__link {
+                    @include font-style ($size:14px, $weight: 700);
+                    color: $white;
+                    text-align: center;
+                    text-transform: uppercase;
+                    padding-bottom: 12px;
+                    position: relative;
+
+                    &:hover {
+                        @include linear200 ($property: color);
+                        color: $sunrise; 
+                                             
+                            &:after {
+                                @include linear200 ();
+                                opacity: 1;
+                                }
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 100%;
+                        height: 3px;
+                        background: $sunrise;
+                        opacity: 0;
+                        bottom: 0; 
+                    }
+                }
+            }
+        }
+
+        &-headline {
+            width: 802px;
+            margin: 179px auto 0;
+            text-align: center;
+            padding-bottom: 240px;
+
+            &__subtitle {
+                @include font-subtitles ($size:72px, $color: $white);
+                padding-bottom: 42px;
+            }
+
+            &__title {
+                @include font-titles ($size:150px, $color: $white);
+                line-height: 1;
+                padding-bottom: 140px;
+                text-transform: uppercase;
+            }
+            &__button {
+                @include font-style ($size: 14px, $weight: 700);
+                text-transform: uppercase;
+                border: 3px solid $white;
+                padding: 15px 33px;
+                width: 160px;
+                margin: auto;
+                color: $white;
+                
+                &:hover {              
+                   @include linear200 ($property: color);
+                   color: $dawn;
+                }                 
+            }
+        }
+}

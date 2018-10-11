@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+a, img {
+    display: block;
+}
+
+.header-navigation {
+    width: 970px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    margin-bottom: 21px;
+}
+
+.headern-menu {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 27px;
+}
+
+.header-menu__item {
+    margin-right: 30px;
+    position: relative;
+}
+
+.header-menu__item:last-child {
+    margin-right: 0;
+}
+
+.header-menu__link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(108, 108, 108, 1);
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.header-menu__link:after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 3px;
+    background: #5094f2;
+    display: none;
+    margin-top: 19px;
+}
+
+.header-menu__link:hover:after {
+    display: block;
+} 
+
+
+
+
+
+
+.slider {
+    background-image: url('../img/fon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__button {
+    width: 25px;
+    height: 63px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+}
+
+
+.slider__button--left {
+    background-image: url('../img/left.png');
+    
+}
+
+
+.slider__button--right {
+    background-image: url('../img/right.png');
+}
+
+
+.slider__img {
+    margin: 38px 104px 0 60px;
+}
+
+.slider__info {
+    margin: 153px 118px 118px 0;
+    font-family: 'Roboto', sans-serif; 
+    line-height: 1.5; 
+    color: white;
+}
+
+.slider__title {
+    font-size: 42px;
+    font-weight: 300;
+}
+
+.slider__subtitle {
+    width: 250px;
+    margin: 20px 0 38px;
+    font-size: 26px;
+    font-weight: 300;
+}
+
+.slider__sign-link {
+    margin-left: 19px;
+    padding: 11px 11px 8px 45px;
+    background-color: #5094f2;
+    width: 172px;
+    font-family: 'Roboto', sans-serif; 
+    color: white;
+    font-weight: 300;
+    font-size: 22px;
+    text-align: center;
+    position: relative;
+}
+
+
+.slider__sign-link:before {
+    content:"";
+    display: block;
+    background-image: url('../img/sign.png');
+    position: absolute;
+    width: 23px;
+    height: 23px; 
+    top:15px;
+    left: 25px;
+}
+
+.features__list {
+    width: 970px;
+    display: flex;
+    justify-content: space-between;
+    margin: 73px auto 91px;
+}
+
+
+.features__list-item {
+    width: 250px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.features__item-title {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(80, 148, 242, 255);
+    margin-bottom: 9px;
+}
+
+
+.features__item-subtitle {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(144, 144, 144, 1);
+}
+
+
+.features__list-item--pen:before {
+    width: 186px;
+    height: 186px;
+    content: "";
+    background-image: url('../img/pen.png');
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.features__list-item--tv:before {
+    width: 186px;
+    height: 186px;
+    content: "";
+    background-image: url('../img/tv.png');
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.features__list-item--basket:before {
+    width: 186px;
+    height: 186px;
+    content: "";
+    background-image: url('../img/basket.png');
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.shop {
+    margin: auto;
+    width: 910px;
+}
+
+.shop__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 42px;
+    font-weight: 300;
+    color: rgba(111, 113, 115, 1);
+    text-align: left;
+}
+
+.shop__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.shop__img {
+    margin-top: 20px;
+}
+
+.shop__text-wrapper {
+    width: 453px;
+    margin-top: 13px;
+}
+
+.shop__subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    color: rgba(111, 113, 115, 1);
+    text-align: left;
+    margin-bottom: 34px;
+    font-weight: 300;
+}
+
+
+.shop__text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(144, 144, 144, 1);
+    text-align: left;
+    line-height: 2;
+}
+
+.footer {
+    text-align: center;
+    border-top: 1px solid rgba(144, 144, 144, 1);
+    padding: 24px 0 44px;
+}
+
+.footer__copy {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: rgba(144, 144, 144, 1);
+    font-weight: 300;
+}

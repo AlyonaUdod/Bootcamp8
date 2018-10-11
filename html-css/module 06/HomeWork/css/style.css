@@ -4,12 +4,12 @@
 }
 
 @font-face {
-    font-family:  Montserrat-Regular;
+    font-family: Montserrat-Regular;
     src: url('../fonts/Montserrat/Montserrat-Regular.ttf')
 }
 
 @font-face {
-    font-family:  Montserrat-Bold;
+    font-family: Montserrat-Bold;
     src: url('../fonts/Montserrat/Montserrat-Bold.ttf')
 }
 
@@ -256,6 +256,9 @@ a {
 }
 
 /* Team */
+
+
+
 
 .team {
     width: 1200px;

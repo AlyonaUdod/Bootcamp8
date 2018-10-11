@@ -1,0 +1,63 @@
+
+.footer {  
+    margin: 60px auto;
+    @include block-options ($width: 1200px);
+    border-top: $footer-border;
+
+        &-info {     
+            margin: 24px 0;
+            @include block-options ();
+
+                &__copyright {
+                    @include font-style ($size: 14px);
+                    color: $text-main;
+                }
+
+                &__link {
+                    padding-left: 3px;
+                    @include font-style ($size: 14px);
+                    color: $mint;  
+                   
+                    &:hover { 
+                        @include linear200 ($property: color);
+                        transition: color 200ms linear;
+                        color: $dawn;
+                    }
+                }
+        }
+
+
+        &-input {
+            padding-top: 10px;
+            @include block-options ();
+            align-items: center;
+        
+                &__email {
+                    width: 230px;
+                    @extend %footer-input-email;     
+                    padding: 13px;      
+                    border: $footer-border;
+        
+                        &::placeholder {  
+                            @extend %footer-input-email;
+                            text-transform: capitalize;
+                        }
+                }
+        
+                &__submit {
+                    padding: 14px 33px;
+                    @include font-style ($weight: 700, $size: 14px);
+                    text-transform: uppercase;
+                    text-align: center; 
+                    color: $white;
+                    background: $mint;
+                    border: $footer-border;
+                    border-left: 0px;
+                    
+                        &:hover {                           
+                            @include linear200 ($property: background);
+                            background: $gradient;
+                        }     
+                }
+        }
+}

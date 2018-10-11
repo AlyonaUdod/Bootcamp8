@@ -1,0 +1,13 @@
+$white: rgba(255, 255, 255, 1);
+$sunrise:rgba(252, 227, 138, 1);
+$sunrise-opacity:rgba(252, 227, 138, .9);
+$dawn:rgba(243, 129, 129, 1);
+$dawn-opacity:rgba(243, 129, 129, .9);
+$text-main: rgba(51, 51, 51, 1);
+$text-text: rgba(153, 153, 153, 1);
+$mint: rgba(149, 225, 211, 1);
+$gradient: linear-gradient(to bottom,$dawn-opacity 0%,$sunrise-opacity 100%); 
+$gradient-man: linear-gradient( 360deg, $sunrise-opacity, $dawn-opacity);
+$footer-light: rgba(204, 204, 204, 1);
+
+$footer-border: 1px solid rgba(229, 229, 229, 1);

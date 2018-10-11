@@ -1,0 +1,32 @@
+@mixin block-options ($display: flex, $justify: space-between, $flow: row wrap, $width: auto) {
+    display: $display;
+    justify-content: $justify;
+    width: $width;
+    flex-flow: $flow;
+ }
+
+ @mixin font-style ($family: 'Montserrat' sans-serif, $size: 15px, $weight: 400) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+ }
+
+ @mixin font-titles ($family: 'Montserrat' sans-serif, $size: 30px, $weight: 700, $color: $text-main) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+ }
+
+ @mixin font-subtitles ($family: 'Kaushan Script' cursive, $size: 24px, $weight: 400, $color: $text-main) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+ }
+
+ @mixin linear200 ($property: opacity, $duration: 200ms, $function: linear) {
+     transition-property: $property;
+     transition-duration: $duration;
+     transition-timing-function: $function;
+ }

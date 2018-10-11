@@ -1,0 +1,41 @@
+%header-list-icon {
+    width: 18px;
+    height: 18px;
+    fill: $white;  
+}
+
+%dawn-line {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: $dawn;
+    bottom: 0;
+    margin: 42px auto 0;
+}
+
+%section-title {
+    width: 309px;
+    margin: auto;
+    text-align: center;
+    @include font-titles ();
+    padding-bottom: 42px;
+    position: relative;
+
+        &:after {
+           @extend %dawn-line;
+        }
+}
+
+%section-subtitle {
+    @include font-subtitles ();  
+    display: block;
+    margin-bottom: 22px;
+}
+
+%footer-input-email {
+    @include font-style ($family: 'Roboto' sans-serif, $weight: 300);
+    font-style: italic;
+    color: $footer-light;
+    text-align: left;
+}
