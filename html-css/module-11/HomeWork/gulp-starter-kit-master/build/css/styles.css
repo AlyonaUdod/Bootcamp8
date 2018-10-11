@@ -129,7 +129,7 @@ ul {
 .header {
   margin: auto;
   width: 100%;
-  background-image: linear-gradient(to bottom, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("/img/eagle.png");
+  background-image: linear-gradient(to bottom, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("./img/eagle.png");
   background-size: cover;
   background-blend-mode: normal;
 }
@@ -491,7 +491,7 @@ ul {
 }
 
 .footer-input__submit:hover {
-  transition-property: background;
+  transition-property: background-color;
   transition-duration: 200ms;
   transition-timing-function: linear;
   background: linear-gradient(to bottom, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%);
@@ -499,6 +499,6 @@ ul {
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .header {
-    background-image: linear-gradient(to bottom, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("/img/eagle@2X.png");
+    background-image: linear-gradient(to bottom, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("./img/eagle@2X.png");
   }
 }

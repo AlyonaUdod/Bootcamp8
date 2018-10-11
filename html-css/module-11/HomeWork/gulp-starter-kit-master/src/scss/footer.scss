@@ -55,8 +55,8 @@
                     border-left: 0px;
                     
                         &:hover {                           
-                            @include linear200 ($property: background);
-                            background: $gradient;
+                            @include linear200 ($property: background-color);
+                            background-color: $gradient;
                         }     
                 }
         }
