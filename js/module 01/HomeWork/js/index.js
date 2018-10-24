@@ -17,11 +17,6 @@ let admin = prompt("Enter login");
 //     }
 // }
 
-
-
-
-
-
 switch (true) {
     case (admin === null) :
         alert ('Отменено пользователем!');
