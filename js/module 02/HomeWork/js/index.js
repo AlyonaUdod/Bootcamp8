@@ -30,20 +30,17 @@ do {
     userInput = prompt ('Enter Number');
     if (userInput === null) {
         break;
-    } else if (!isNaN(userInput)){
+    } else if (!isNaN(userInput) && userInput !== ''){
         numbers.push(Number(userInput));
     } else {
-        alert ( 'You have to enter number, try again please.')
+        alert ('You have to enter number, try again please.')
     }
 } while (userInput !== null)
-
 for ( let elements of numbers) {
     total += elements;     
 }
-
 if ( numbers.length > 0) {
-     alert (`Общая сумма чисел равна ${total}`)
-    } else { 
-}
+     alert (`Total numbers are ${total}.`)
+    }
 console.log(numbers);
 console.log(total);
