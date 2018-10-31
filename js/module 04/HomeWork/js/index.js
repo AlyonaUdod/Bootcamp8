@@ -72,11 +72,11 @@ const products = {
     };
 
     this.onSuccess = function(change) {    
-      alert (`Спасибо за покупку, ваша сдача ${change}!`)
+      console.log(`Спасибо за покупку, ваша сдача ${change}!`);
     };
     
     this.onError = function() {
-      alert ('Очень жаль, вам не хватает денег на покупки')
+      console.log('Очень жаль, вам не хватает денег на покупки');
     };
 
     this.reset = function() {
@@ -177,7 +177,7 @@ const products = {
 
 
 
-  
+
  /******************************************************************************************/
 // expl 3
 
