@@ -118,7 +118,7 @@ console.log(getUsersByEyeColor(users, 'blue')); // [объект Moore Hensley, 
 /**
  * Получить массив имен пользователей по полу (поле gender)
  */
-const getUsersByGender = (arr, gender) => arr.filter( el => el.gender === gender );
+const getUsersByGender = (arr, gender) => arr.filter( el => el.gender === gender ).map(el => el.name);
 
 console.log(getUsersByGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
@@ -180,7 +180,7 @@ console.log(getUsersByFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree
 // */
 const getAllUniqueSkills = arr => arr
     .map(el => el.skills)
-    .reduce((acc, el) => acc.concat(el),[])
+    .reduce((acc, el) =>  acc.concat(el), [])
     .sort((a,b) => a > b ? 1 : -1)
     .filter((el,index, arr) => arr.indexOf(el) === index)
 console.log(getAllUniqueSkills(users));

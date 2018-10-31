@@ -300,26 +300,26 @@
   как свойства объекта в формате "имя":"кол-во задач"
 */
 
-// const tasksCompleted = {
-//     ann: 29,
-//     david: 35,
-//     helen: 1,
-//     lorence: 99
-//   };
+const tasksCompleted = {
+    ann: 29,
+    david: 35,
+    helen: 1,
+    lorence: 99
+  };
   
 
-// let values = Object.values(tasksCompleted);
-// let count = 0;
-// for ( let el of values) {
-//     if (el>count) {
-//         count=el
-//     }  
-// }
-// for ( let elem in tasksCompleted) {
-//     if (tasksCompleted[elem] === count){
-//         console.log(`${elem}: ${count}`);
-//     }
-// }
+let values = Object.values(tasksCompleted);
+let count = 0;
+for ( let el of values) {
+    if (el>count) {
+        count=el
+    }  
+}
+for ( let elem in tasksCompleted) {
+    if (tasksCompleted[elem] === count){
+        console.log(`${elem}: ${count}`);
+    }
+}
 
 
 

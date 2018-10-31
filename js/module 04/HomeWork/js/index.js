@@ -45,8 +45,48 @@ const products = {
   */
   
   function Cashier(name, productDatabase) {
+    this.name = name;
+    this.productDatabase = productDatabase;
+    this.customerMoney = 0; 
+
+    this.getCustomerMoney = function(value) {
+      this.customerMoney = value;
+    };
+
+    this.countTotalPrice = function(order) {
+      let arr = [];
+        for (let key in order) {
+          arr.push(order[key]*products[key])
+        } 
+        return arr.reduce((acc, el) => acc + el, 0)
+    };
+
+    this.countChange = function(totalPrice) {
+       let arr = [];
+        if (this.customerMoney > totalPrice) {
+          arr.push(this.customerMoney-totalPrice)
+           return arr
+        } else {
+          return null
+        }
+    };
+
+    this.onSuccess = function(change) {    
+      alert (`Спасибо за покупку, ваша сдача ${change}!`)
+    };
+    
+    this.onError = function() {
+      alert ('Очень жаль, вам не хватает денег на покупки')
+    };
+
+    this.reset = function() {
+      this.customerMoney = 0
+    };
+    }
+
+
     // 🔔 не забывайте о this при обращении к свойствам и методам будущего объекта
-  }
+  
   
   /* Заказ пользователя хранится в виде объекта следующего формата. "имя-продукта":"количество-единиц" */
   const order = {
@@ -78,7 +118,7 @@ const products = {
   console.log(mango.customerMoney); // 300
   
   // Вызываем countChange для подсчета сдачи
-  const change = mango.countChange();
+  const change = mango.countChange(totalPrice);
   
   // Проверяем что нам вернул countChange
   console.log(change); // 190
@@ -97,3 +137,79 @@ const products = {
   
   // Проверяем значения после reset
   console.log(mango.customerMoney); // 0
+
+
+
+
+/******************************************************************************************/
+// expl 2
+  const order2 = {
+    bread: 5,
+    apples: 3,
+    chicken: 4,
+    cheese: 1
+  };
+  const kiwi = new Cashier('Kiwi', products);
+  
+  console.log(kiwi.name);
+  console.log(kiwi.productDatabase);
+  console.log(kiwi.customerMoney);
+  
+  const totalPrice2 = kiwi.countTotalPrice(order2);
+  
+  console.log(totalPrice2); 
+  
+  kiwi.getCustomerMoney(500);
+  
+  console.log(kiwi.customerMoney);
+  
+  const change2 = kiwi.countChange(totalPrice2);
+  
+  console.log(change2); 
+  
+  if(change2 !== null) {
+    kiwi.onSuccess(change2);
+  } else {
+    kiwi.onError();
+  }
+  kiwi.reset();
+  console.log(kiwi.customerMoney); 
+
+
+
+  
+ /******************************************************************************************/
+// expl 3
+
+  const order3 = {
+    bread: 10,
+    apples: 30,
+    chicken: 1,
+    cheese: 9,
+  };
+
+  const pioneer = new Cashier('WorkerMan', products);
+  
+  console.log(pioneer.name);
+  console.log(pioneer.productDatabase);
+  console.log(pioneer.customerMoney);
+  
+  const totalPrice3 = pioneer.countTotalPrice(order3);
+  
+  console.log(totalPrice3); 
+  
+  pioneer.getCustomerMoney(400);
+  
+  console.log(pioneer.customerMoney);
+  
+  const change3 = pioneer.countChange(totalPrice3);
+  
+  console.log(change3); 
+  
+  if(change3 !== null) {
+    pioneer.onSuccess(change3);
+  } else {
+    pioneer.onError();
+  }
+  pioneer.reset();
+  console.log(pioneer.customerMoney); 
