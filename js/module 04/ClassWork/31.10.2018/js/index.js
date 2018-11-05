@@ -2,55 +2,55 @@
 
 // THIS *******************************************************
 
-const motel = {
-    name: '7 Days',
-    stars: 4,
-    rooms: 150,
-    hasSwPool: true,
-    hasCort: false,
-    showName() {
-        console.log(`${this.name}`);
-    },
-    changeRoomNum(number) {
-        this.rooms = motel.rooms - number; // this - мы обращаемся к имени объекта, в котором вызывается функция.
-        return motel.rooms;
-    },
-    openCort() {
-        motel.hasCort = !motel.hasCort;
-    },
-    //   showThis() {
-//         console.log(this); // в таком случае у нас выводятся все характеристики объекта, в котором запускается функция (который является this для этой функции)
+// const motel = {
+//     name: '7 Days',
+//     stars: 4,
+//     rooms: 150,
+//     hasSwPool: true,
+//     hasCort: false,
+//     showName() {
+//         console.log(`${this.name}`);
+//     },
+//     changeRoomNum(number) {
+//         this.rooms = motel.rooms - number; // this - мы обращаемся к имени объекта, в котором вызывается функция.
+//         return motel.rooms;
+//     },
+//     openCort() {
+//         motel.hasCort = !motel.hasCort;
+//     },
+//     //   showThis() {
+// //         console.log(this); // в таком случае у нас выводятся все характеристики объекта, в котором запускается функция (который является this для этой функции)
+// //     }
+//     // showThis: () => { 
+//     //     console.log(this);
+//     // }
+
+//     wrapper () {    // мы создаем обычную функцию внутри объекта, в нее засовываем стрелочную функцию, чтобы при запуске стрелочной функции она подтягивала контекст обычной функции, которой оборачивается. 
+//         const showThis = () => { 
+//             console.log('Show this context', this);
+//         };
+//         showThis();
 //     }
-    // showThis: () => { 
-    //     console.log(this);
-    // }
-
-    wrapper () {    // мы создаем обычную функцию внутри объекта, в нее засовываем стрелочную функцию, чтобы при запуске стрелочной функции она подтягивала контекст обычной функции, которой оборачивается. 
-        const showThis = () => { 
-            console.log('Show this context', this);
-        };
-        showThis();
-    }
-}
-
-
-// Функция обычная создает контекст исполнения в момент запуска. 
-// контекст исполнения такой функции определяется в момент запуска функции. ТОЛЬКО ДЛЯ ТАКИХ ФУНКЦИИ, не для стрелочных
-// function showThis() {
-//     console.log(this);
 // }
-// console.log(motel.stars);
 
-// motel.showName(); // если возле функции есть объект - это ссылка на объект, который функцию запускает.
-// motel.changeRoomNum(10);
-// console.log(motel.rooms);
-// motel.openCort();
-// console.log(motel.hasCort);
 
-// Контекст исполнения функции. - ссылка на объект, который запускает функцию
-// motel.showThis();
+// // Функция обычная создает контекст исполнения в момент запуска. 
+// // контекст исполнения такой функции определяется в момент запуска функции. ТОЛЬКО ДЛЯ ТАКИХ ФУНКЦИИ, не для стрелочных
+// // function showThis() {
+// //     console.log(this);
+// // }
+// // console.log(motel.stars);
 
-   motel.wrapper();
+// // motel.showName(); // если возле функции есть объект - это ссылка на объект, который функцию запускает.
+// // motel.changeRoomNum(10);
+// // console.log(motel.rooms);
+// // motel.openCort();
+// // console.log(motel.hasCort);
+
+// // Контекст исполнения функции. - ссылка на объект, который запускает функцию
+// // motel.showThis();
+
+//    motel.wrapper();
 
 
 // 1. Cтрелочная функция запоминает свой контекст исполнения в момент написания.
@@ -65,46 +65,46 @@ const motel = {
 
 // APPLY, CALL ***********************************************
 
-const hotel = {
-    name: 'Resort Hotel',
-    price: 2500,
-};
-const hotel2 = {
-    name: '4 Seasons Hotel',
-    price: 500,
-};
-const hotel3 = {
-    name: '7 days Hotel',
-    price: 700,
-};
+// const hotel = {
+//     name: 'Resort Hotel',
+//     price: 2500,
+// };
+// const hotel2 = {
+//     name: '4 Seasons Hotel',
+//     price: 500,
+// };
+// const hotel3 = {
+//     name: '7 days Hotel',
+//     price: 700,
+// };
 
-// const hotelInfo = (function() {
-//     console.log(`${this.name} and ${this.price}.`);
-// })
+// // const hotelInfo = (function() {
+// //     console.log(`${this.name} and ${this.price}.`);
+// // })
 
-// Используется для проверки например норм работает функция или нет. 
-function showInfo (name = 'User', age = 'old') {
-    console.log(`Hello ${name} you live in ${this.name} and ${this.price}. You are ${age}?`);
-}
+// // Используется для проверки например норм работает функция или нет. 
+// function showInfo (name = 'User', age = 'old') {
+//     console.log(`Hello ${name} you live in ${this.name} and ${this.price}. You are ${age}?`);
+// }
 
-// Первый аргумент - всегда объект, к которому функию ты применяешь. остальные - аргументы, которые хочешь передать.
-// showInfo.call(hotel, 'Homer', 25); // только один объект вызывается. 
-// showInfo.call(hotel3, 'Rick', 100)
+// // Первый аргумент - всегда объект, к которому функию ты применяешь. остальные - аргументы, которые хочешь передать.
+// // showInfo.call(hotel, 'Homer', 25); // только один объект вызывается. 
+// // showInfo.call(hotel3, 'Rick', 100)
 
-// apple - аргументы после объекта передаются в виде массива. Чтобы не писать например в функии преобразование полученых аргументов в массив
-showInfo.apply(hotel, ['Homer', 25]);
-showInfo.apply(hotel3);
+// // apple - аргументы после объекта передаются в виде массива. Чтобы не писать например в функии преобразование полученых аргументов в массив
+// showInfo.apply(hotel, ['Homer', 25]);
+// showInfo.apply(hotel3);
 
-// call - coma;
-// apply - arr;
+// // call - coma;
+// // apply - arr;
 
 
-// BIND **********************************
+// // BIND **********************************
 
-// функция создает копию, и намертво привязывает контекст исполнения к конкртеному объекту
+// // функция создает копию, и намертво привязывает контекст исполнения к конкртеному объекту
 
-const boundShowInfo = showInfo.bind(hotel); 
-boundShowInfo (); 
+// const boundShowInfo = showInfo.bind(hotel); 
+// boundShowInfo (); 
 
 
 
@@ -213,24 +213,24 @@ boundShowInfo ();
 */
 
 
-function User (name, isActive, age, friends) {
-    this.name = name;
-    this.isActive = isActive;
-    this.age = age;
-    this.friends = friends;
+// function User (name, isActive, age, friends) {
+//     this.name = name;
+//     this.isActive = isActive;
+//     this.age = age;
+//     this.friends = friends;
 
-    this.getInfoUser = function() {
-        console.log(`User ${name} is ${age} years old and has ${friends} friends.`);
-    };
-}
+//     this.getInfoUser = function() {
+//         console.log(`User ${name} is ${age} years old and has ${friends} friends.`);
+//     };
+// }
 
-let user01 = new User ('Nick', true, 18, 65);
-let user02 = new User ('Kasye', false, 78, 40);
-let user03 = new User ('Charming', true, 23, 100);
+// let user01 = new User ('Nick', true, 18, 65);
+// let user02 = new User ('Kasye', false, 78, 40);
+// let user03 = new User ('Charming', true, 23, 100);
 
-user01.getInfoUser();
-user02.getInfoUser();
-user03.getInfoUser();
+// user01.getInfoUser();
+// user02.getInfoUser();
+// user03.getInfoUser();
 
 
 
@@ -243,34 +243,34 @@ user03.getInfoUser();
   в методах объекта store
 */
 
-const store = {
-    products: ['bread', 'cheese', 'milk', 'apples'],
-    managers: ['poly', 'mango', 'ajax'],
+// const store = {
+//     products: ['bread', 'cheese', 'milk', 'apples'],
+//     managers: ['poly', 'mango', 'ajax'],
 
-    addManager(manager) {
-      this.managers.push(manager);
+//     addManager(manager) {
+//       this.managers.push(manager);
       
-      console.log(this.managers);
-    },
-    removeManager(manager) {
-      const idx = this.managers.indexOf(manager);
+//       console.log(this.managers);
+//     },
+//     removeManager(manager) {
+//       const idx = this.managers.indexOf(manager);
       
-      this.managers.splice(idx, 1);
+//       this.managers.splice(idx, 1);
       
-      console.log(this.managers);
-    },
-    getProducts() {
-      console.log(this.products);
+//       console.log(this.managers);
+//     },
+//     getProducts() {
+//       console.log(this.products);
       
-      return this.products;
-    }
-  }
+//       return this.products;
+//     }
+//   }
   
-  store.addManager('chelsey'); // ['poly', 'mango', 'ajax', 'chelsey']
+//   store.addManager('chelsey'); // ['poly', 'mango', 'ajax', 'chelsey']
   
-  store.removeManager('mango'); // ['poly', ajax', 'chelsey']
+//   store.removeManager('mango'); // ['poly', ajax', 'chelsey']
   
-  store.getProducts(); // ['bread', 'cheese', 'milk', 'apples']
+//   store.getProducts(); // ['bread', 'cheese', 'milk', 'apples']
   
 
 
@@ -283,39 +283,106 @@ const store = {
   Расставьте отсутствующие this в конструкторе объектов Account
 */
 
-function Account({ login, password, type = "regular" }) {
-    this.login = login;
-    this.password = password;
-    this.type = type;
+// function Account({ login, password, type = "regular" }) {
+//     this.login = login;
+//     this.password = password;
+//     this.type = type;
   
-    this.changePassword = function(newPassword) {
-      this.password = newPassword;
-      console.log(this.password);
+//     this.changePassword = function(newPassword) {
+//       this.password = newPassword;
+//       console.log(this.password);
+//     };
+  
+//     this.getAccountInfo = function() {
+//       console.log(`
+//         Login: ${login}, 
+//         Pass: ${password}, 
+//         Type: ${type}
+//       `);
+//     };
+//   }
+
+
+//   const account = new Account({
+//     login: "Mango",
+//     password: "qwe123",
+//     type: "premium"
+//   });
+  
+
+//   console.log(account.login); // 'Mango'
+//   console.log(account.password); // 'qwe123'
+//   console.log(account.type); // 'premium'
+//   account.changePassword("asdzxc"); // 'asdzxc' 
+//   account.getAccountInfo(); // Login: 'Mango', Pass: 'asdzxc', Type: 'premium'
+
+
+
+
+/* 10 */
+
+
+//   Написати калькулятор за допомогою ф-ї конструктора. Ця ф-я створює обєкт 
+//  з  методами read(), sum(), mul(), addMethod(name, function);
+// Метод read() запитує в користувача числа за допомогою prompt і запамятовує їх.
+// Метод read() працює до тих пір поки користувач не натисне Cancel;
+// Метод sum() виводить в консоль суму всіх чисел що ввели в процесі роботи метода read().
+// Метод console.log(calculator.sum()) // 15() виводить в консоль добуток всіх чисел.
+// Метод addMethod(name, function) вчить калькулятор нової операції. 
+// параметр name - назва нового метода
+// параметр function - код нового метода.
+// За допомогою метода addMethod(name, function) додати в калькулятор новий функціонад який буде знаходити різницю 
+// всіх введених цифр які отримали при використанні метода read();
+
+ 
+function Calculator () {
+    this.arr = [];
+    this.ask = 0; 
+    this.read = function(){    
+      do { 
+            this.ask = prompt ('Enter Number');
+            if (this.ask === null) {
+                break;
+            } else if (!isNaN(this.ask) && this.ask !== ''){
+                this.arr.push(Number(this.ask));
+            } else {
+                alert ('You have to enter number, try again please.')
+            }
+        } while (this.ask !== null)
+        return this.arr 
     };
-  
-    this.getAccountInfo = function() {
-      console.log(`
-        Login: ${login}, 
-        Pass: ${password}, 
-        Type: ${type}
-      `);
+
+    this.sum = function(){
+        return this.arr.reduce((acc, el) => acc + el)
     };
-  }
+    
+    this.mul = function(){
+        return this.arr.reduce((acc, el) => acc*el) 
+    };
+
+    this.addMethod = function(name,fun) {
+        this[name] = fun;
+    }
+}
+
+function minus () {
+   return this.arr.reduce((acc, el) => acc - el)
+}
+// Calculator.prototype.addMethod = function() {
+//     this.minus = function(){
+//         return arr.reduce((acc, el) => acc - el)
+//      } 
+//     }
 
 
-  
-  const account = new Account({
-    login: "Mango",
-    password: "qwe123",
-    type: "premium"
-  });
-  
+let calculator = new Calculator();
 
-  console.log(account.login); // 'Mango'
-  console.log(account.password); // 'qwe123'
-  console.log(account.type); // 'premium'
+console.log(calculator.read()); // вводимо 5 цифр (1,2,3,4,5) після цього натискаємо Cancel і метод read() зупиняє роботу
 
-  console.log(account.changePassword("asdzxc")); // 'asdzxc' 
+console.log(calculator.sum()) // 15
 
-  console.log(account.getAccountInfo()); // Login: 'Mango', Pass: 'asdzxc', Type: 'premium'
+console.log(calculator.mul()) // 120
 
+calculator.addMethod('minus', minus); // додається метод на віднімання
+
+console.log(calculator.minus()) // -13
