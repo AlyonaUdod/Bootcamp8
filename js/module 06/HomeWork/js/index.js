@@ -103,12 +103,13 @@ class Hamburger {
      */
     
      calculateToppingsPrices () {
-        let total = 0;
-        for (let el of this._toppings) {
-          if (el !== Hamburger.TOPPINGS.el) {
-            total += Hamburger.TOPPINGS[el].price
-          } 
-        } return total 
+       return this._toppings.reduce((acc,el) => acc + Hamburger.TOPPINGS[el].price, 0)
+        // let total = 0;
+        // for (let el of this._toppings) {
+        //   if (el !== Hamburger.TOPPINGS.el) {
+        //     total += Hamburger.TOPPINGS[el].price
+        //   } 
+        // } return total 
       } 
 
       get price() {
@@ -127,12 +128,13 @@ class Hamburger {
      */
 
     calculateToppingsCalories () {
-      let total = 0;
-      for (let el of this._toppings) {
-        if (el !== Hamburger.TOPPINGS.el) {
-          total += Hamburger.TOPPINGS[el].calories
-        } 
-      } return total 
+      return this._toppings.reduce((acc,el) => acc + Hamburger.TOPPINGS[el].calories, 0)
+      // let total = 0;
+      // for (let el of this._toppings) {
+      //   if (el !== Hamburger.TOPPINGS.el) {
+      //     total += Hamburger.TOPPINGS[el].calories
+      //   } 
+      // } return total 
     } 
 
     get calories() {
@@ -221,6 +223,7 @@ class Hamburger {
 
   // А сколько теперь стоит?
   console.log("Ham1 Price with sause: ",hamburger.price);
+  // console.log("Ham1 Calories with sause: ",hamburger.calories);
   
   // Проверить, большой ли гамбургер?
   console.log("Is hamburger large: ", hamburger.size === Hamburger.SIZE_LARGE); // -> false
