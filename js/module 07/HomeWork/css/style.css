@@ -1,17 +1,4 @@
-.big-text {
-    color: red;
-    font-size: 50px;
-    text-align: center;
-}
-
-.main-title {
-    color: green;
-    font-size: 50px;
-    text-align: center;
-}
-
-
- html {
+html {
     box-sizing: border-box;
   }
   
@@ -88,12 +75,4 @@
   
   .button:hover {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-
-
-  .div__new {
-    width: 30px;
-    height: 30px;
-    background-color: #734466;
   }
