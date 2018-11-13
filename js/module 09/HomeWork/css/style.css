@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.stopwatch {
+    margin: 200px auto;
+    border-radius: 60px;
+    box-shadow: 3px 3px 10px grey,
+    -3px -3px 10px grey;
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+.wrapper {
+    width: 400px;
+    margin: 30px 150px 0;
+    padding: 20px 0;
+    font-size: 80px;
+    font-weight: 500;
+    text-align: center;
+    background-color: rgb(236, 240, 253);
+    border-radius: 60px;
+    box-shadow: 3px 3px 10px grey,
+    -3px -3px 10px grey;
+}
+
+.time {
+    font-size: 80px;
+}
+
+.sm-time {
+    margin-left: 185px;
+    font-size: 30px;
+}
+
+.laps-list {
+    margin-left: 82px; 
+    width: 80px;
+}
+.laps {
+    font-size: 24px;
+    color: grey;
+    text-align: left;
+}
+
+.btn {
+    width: 150px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 60px;
+    box-shadow: 3px 3px 10px grey,
+    -3px -3px 10px grey;    
+    outline: none;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
+
+.js-start {
+    background: green;
+}
+
+.js-take-lap {
+    background: yellow;
+}
+
+.js-reset{
+    background: red;
+}
+

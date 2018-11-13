@@ -98,22 +98,22 @@
 // ? - параметр запроса
 // & - перечисление парметров запроса
 
-let URL = 'https://pixabay.com/api/?key=5018958-ed49ccd90878e6614abdf24a6&category=backgrounds&order=latest&per_page=9';
+// let URL = 'https://pixabay.com/api/?key=5018958-ed49ccd90878e6614abdf24a6&category=backgrounds&order=latest&per_page=9';
 
- let body = document.querySelector('body');
+//  let body = document.querySelector('body');
 
- function forEa (el) {
-    let img = document.createElement('img');
-    img.setAttribute('src', el);    
-    img.style.width = '200px';
-    img.style.height = 'auto';
-    img.style.display = 'block'
-    img.style.margin = '10px auto'
-    return img
-}
+//  function forEa (el) {
+//     let img = document.createElement('img');
+//     img.setAttribute('src', el);    
+//     img.style.width = '200px';
+//     img.style.height = 'auto';
+//     img.style.display = 'block'
+//     img.style.margin = '10px auto'
+//     return img
+// }
 
-fetch(URL)
-.then(response => response.json()) 
+// fetch(URL)
+// .then(response => response.json()) 
 // .then(function data (data) {
 //     let body = document.querySelector('body');
 //     for (let el of data.hits) {
@@ -121,4 +121,53 @@ fetch(URL)
 //         img.setAttribute('src', el.largeImageURL);
 //         body.append(img)}
 // })
-.then(data => data.hits.forEach(el => body.append(forEa(el.largeImageURL))))
+// .then(data => data.hits.forEach(el => body.append(forEa(el.largeImageURL))))
+
+
+
+/*********************************************************************/
+// Task 2
+
+// let container = document.querySelector('#container');
+// let input = document.querySelector('.input');
+// let submit = document.querySelector('.box');
+// let more = document.querySelector('#get');
+
+// function findPictures (count) {
+//     event.preventDefault()
+//     fetch(`https://pixabay.com/api/?key=5018958-ed49ccd90878e6614abdf24a6&category=backgrounds&order=latest&per_page=6&q=${input.value}&page=${count}`)
+//     .then(response => response.json())
+//     .then(data => data.hits.forEach(el => container.append(createDiv(el))))   
+// }
+
+// function createDiv (el) {
+//     let div = document.createElement('div');
+//     let p = document.createElement('p');
+//     p.textContent = el.user;
+//     let img = document.createElement('img');
+//     img.setAttribute('src', el.webformatURL);    
+//     div.append(p,img)
+//     return div
+// }
+
+// function showMorePictures () {
+//     let count = 1;
+//     count++;
+//     findPictures(count);
+// }
+
+// function showNew () {
+//     let count = 1;
+//     container.innerHTML ='';
+//     findPictures(count);
+// }
+
+// window.addEventListener('DOMContentLoaded', findPictures);
+// submit.addEventListener('click', showNew);
+// more.addEventListener('click', showMorePictures )
+
+
+
+
+/*********************************************************************/
+// Task 3 
