@@ -38,7 +38,6 @@ const posts = [
 let root = document.querySelector('#root');
 
 function createPostCard(obj) {
-
         let div = document.createElement('div');
         div.classList.add('post');
         root.append(div);
