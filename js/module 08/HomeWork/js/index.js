@@ -186,11 +186,12 @@ class Gallery {
       }
     } 
     changeFullview(event) {
-      event.preventDefault();
-      if(event.target.tagName === "IMG") {
-        this.fullImage.setAttribute('src', event.target.dataset.fullview)
-        document.querySelectorAll('.preview img').forEach(el => el === event.target ? el.classList.add('hover') : el.classList.remove('hover'))
-      }
+      document.querySelector('.hover').classList.remove('hover');
+      event.target.classList.add('hover');
+      // if(event.target.tagName === "IMG") {
+      //   this.fullImage.setAttribute('src', event.target.dataset.fullview)
+      //   document.querySelectorAll('.preview img').forEach(el => el === event.target ? el.classList.add('hover') : el.classList.remove('hover'))
+      // }
   }
 }
 

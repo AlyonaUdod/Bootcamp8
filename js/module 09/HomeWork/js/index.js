@@ -147,8 +147,6 @@ class Stopwatch {
           this.btnStart.textContent = 'continue';
           clearInterval(this.timerId);
         }
-        console.log(this.isActive); 
-        // console.log(this.startTime);
     }
 
     stop() {
