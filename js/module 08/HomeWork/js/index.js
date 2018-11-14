@@ -123,9 +123,8 @@ function createPreviewGallery(galleryItems) {
 }
 
 function changeFullview() {
-    event.preventDefault();
+    fullImage.setAttribute('src', event.target.dataset.fullview)
     if(event.target.tagName === "IMG") {
-      fullImage.setAttribute('src', event.target.dataset.fullview)
       document.querySelectorAll('.preview img').forEach(el => el === event.target ? el.classList.add('hover') : el.classList.remove('hover'))
     }
 }
@@ -186,12 +185,10 @@ class Gallery {
       }
     } 
     changeFullview(event) {
-      document.querySelector('.hover').classList.remove('hover');
-      event.target.classList.add('hover');
-      // if(event.target.tagName === "IMG") {
-      //   this.fullImage.setAttribute('src', event.target.dataset.fullview)
-      //   document.querySelectorAll('.preview img').forEach(el => el === event.target ? el.classList.add('hover') : el.classList.remove('hover'))
-      // }
+      this.fullImage.setAttribute('src', event.target.dataset.fullview)
+      if(event.target.tagName === "IMG") {
+        document.querySelectorAll('.preview img').forEach(el => el === event.target ? el.classList.add('hover') : el.classList.remove('hover'))
+      }
   }
 }
 

@@ -1,13 +1,14 @@
 'use script';
 
 let list = document.querySelector('.list')
-let input = document.querySelector('type="text"');
+let input = document.querySelector('[type="text"]');
 let form = document.querySelector('#form');
 
 function postTask() {
     event.preventDefault();
     let text = input.value;
     console.log(text);
+    form.reset();
 }
 
 function showTask() {
@@ -26,3 +27,4 @@ function createLi (arr){
 }
 
 window.addEventListener('DOMContentLoaded', showTask);
+form.addEventListener('submit', postTask)
