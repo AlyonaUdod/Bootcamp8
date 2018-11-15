@@ -102,7 +102,7 @@ class Stopwatch {
     this.stop = this.stop.bind(this);
     this.calculateTime = this.calculateTime.bind(this);
     this.updateClockface = this.updateClockface.bind(this);
-    this.getFormattedTime = this.getFormattedTime.bind(this);
+    this.getFormattedTime = this.getFormattedTime.bind(this); 
     }
 
     createStopwatch () {
@@ -204,9 +204,8 @@ sw1.btnStop.addEventListener('click', sw1.stop);
 sw1.btnLoop.addEventListener('click', sw1.lap);
 
 
-
-let sw2 = new Stopwatch(parentB);
-window.addEventListener('DOMContentLoaded', sw2.createStopwatch);
-sw2.btnStart.addEventListener('click', sw2.start)
-sw2.btnStop.addEventListener('click', sw2.stop);
-sw2.btnLoop.addEventListener('click', sw2.lap);
+// let sw2 = new Stopwatch(parentB);
+// window.addEventListener('DOMContentLoaded', sw2.createStopwatch);
+// sw2.btnStart.addEventListener('click', sw2.start)
+// sw2.btnStop.addEventListener('click', sw2.stop);
+// sw2.btnLoop.addEventListener('click', sw2.lap);

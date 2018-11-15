@@ -73,7 +73,8 @@ function getAllUsers () {
             table.append(tr);
         }
     }
-submitBtn.addEventListener('click', getAllUsers)
+// submitBtn.addEventListener('click', getAllUsers)
+
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -106,9 +107,10 @@ function getUserById() {
 // submitBtn.addEventListener('click', getUserById)
 
 
+
 /////////////////////////////////////////////////////////////////////////////////////////
 // для этой функции используются оба поля input
-function addUser(nameP, ageP){
+function addUser(){
     event.preventDefault();
     let nameP = input.value;
     let ageP = input2.value;
@@ -127,15 +129,16 @@ function addUser(nameP, ageP){
         .then(data => console.log(data))
         .catch(error => console.log('ERROR' + error));
     } 
-
 // submitBtn.addEventListener('click', addUser)
 
 
 
+
 /////////////////////////////////////////////////////////////////////////////////////////
-// для этой функции используется одно поле input
+// для этой функции используется первое поле input
 
 function removeUser() {
+    event.preventDefault()
     // console.log(input.value);
     // let idDel = input.value;
     fetch(`https://test-users-api.herokuapp.com/users/${input.value}`, {
@@ -144,4 +147,32 @@ function removeUser() {
       .then(() => console.log('success'))
       .catch(error => console.log('ERROR' + error));
 }
-submitBtn.addEventListener('click', removeUser)
+// submitBtn.addEventListener('click', removeUser)
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// для этой функции используются оба поля input
+
+function updateUser() {
+    event.preventDefault();
+    let userName = input2.value;
+    let userAge = Math.floor(Math.random()*76); // вместо этого может быть еще одно поле инпут, в которое вводится возраст в формате числа.
+    let obj = {
+        name: userName,
+        age: userAge,
+    }
+    console.log(obj);
+    fetch(`https://test-users-api.herokuapp.com/users/${input.value}`, {
+      method: 'PUT',
+      body: JSON.stringify(obj),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(error => console.log('ERROR' + error));
+}
+
+// submitBtn.addEventListener('click', updateUser)
