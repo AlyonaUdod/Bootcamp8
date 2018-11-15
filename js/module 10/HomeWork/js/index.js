@@ -27,10 +27,12 @@
 
 let submitBtn = document.querySelector('.mdc-btn');
 let resultDiv = document.querySelector('.result');
+let form = document.querySelector('.search-form');
 let input = document.querySelector('[name="name"]');
 let input2 = document.querySelector('[name="age"]');
 
 
+// 1 - getAllUsers()
 /////////////////////////////////////////////////////////////////////////////////////////
 // для этой функции используется только первое поле input
 function getAllUsers () {
@@ -73,10 +75,10 @@ function getAllUsers () {
             table.append(tr);
         }
     }
-// submitBtn.addEventListener('click', getAllUsers)
+form.addEventListener('submit', getAllUsers)
 
 
-
+// 2 - getUserById(id)
 /////////////////////////////////////////////////////////////////////////////////////////
 // для этой функции используется только первое поле input
 function getUserById() {
@@ -104,10 +106,10 @@ function getUserById() {
         
         wrap.append(id, name, age)
     }   
-// submitBtn.addEventListener('click', getUserById)
+// form.addEventListener('submit', getUserById)
 
 
-
+//3 addUser()
 /////////////////////////////////////////////////////////////////////////////////////////
 // для этой функции используются оба поля input
 function addUser(){
@@ -129,11 +131,10 @@ function addUser(){
         .then(data => console.log(data))
         .catch(error => console.log('ERROR' + error));
     } 
-// submitBtn.addEventListener('click', addUser)
+// form.addEventListener('submit', addUser)
 
 
-
-
+// 4 removeUser()
 /////////////////////////////////////////////////////////////////////////////////////////
 // для этой функции используется первое поле input
 
@@ -147,10 +148,10 @@ function removeUser() {
       .then(() => console.log('success'))
       .catch(error => console.log('ERROR' + error));
 }
-// submitBtn.addEventListener('click', removeUser)
+// form.addEventListener('submit', removeUser)
 
 
-
+// 5 updateUser()
 /////////////////////////////////////////////////////////////////////////////////////////
 // для этой функции используются оба поля input
 
@@ -174,5 +175,4 @@ function updateUser() {
     .then(data => console.log(data))
     .catch(error => console.log('ERROR' + error));
 }
-
-// submitBtn.addEventListener('click', updateUser)
+// form.addEventListener('submit', updateUser)
