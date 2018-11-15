@@ -139,6 +139,7 @@ class Stopwatch {
           this.btnStop.removeAttribute('disabled', 'disabled');
           this.btnLoop.removeAttribute('disabled', 'disabled');
         } else if (this.isActive === false && this.startTime !== isNaN){
+          this.startTime = Date.now()-this.deltaTime; // добавилась эта строка. 
           this.isActive = true;
           this.timerId = setInterval(this.calculateTime, 100);
           this.btnStart.textContent = 'pause';
@@ -204,8 +205,8 @@ sw1.btnLoop.addEventListener('click', sw1.lap);
 
 
 
-// let sw2 = new Stopwatch(parentB);
-// window.addEventListener('DOMContentLoaded', sw2.createStopwatch);
-// sw2.btnStart.addEventListener('click', sw2.start)
-// sw2.btnStop.addEventListener('click', sw2.stop);
-// sw2.btnLoop.addEventListener('click', sw2.lap);
+let sw2 = new Stopwatch(parentB);
+window.addEventListener('DOMContentLoaded', sw2.createStopwatch);
+sw2.btnStart.addEventListener('click', sw2.start)
+sw2.btnStop.addEventListener('click', sw2.stop);
+sw2.btnLoop.addEventListener('click', sw2.lap);

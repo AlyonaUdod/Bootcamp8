@@ -54,6 +54,8 @@ img {
     object-fit: cover;
 }
 
+
+
 .preview > li > img{
     width: 100%;
     cursor: pointer;

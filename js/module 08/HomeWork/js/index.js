@@ -170,7 +170,7 @@ class Gallery {
     createGallery() {
       this.fullviewDiv.classList.add('fullview');
       this.previewList.classList.add('preview');
-      this.fullImage.setAttribute('alt','alt text 1');
+      this.fullImage.setAttribute('alt',this.items.alt);
       this.fullImage.setAttribute('src', this.items[this.defaultActiveItem-1].fullview); 
       this.parentNode.append(this.fullviewDiv, this.previewList);
       this.fullviewDiv.append(this.fullImage);
@@ -179,7 +179,7 @@ class Gallery {
         let previewImage = document.createElement( 'img');
         previewImage.setAttribute('src', el.preview)
         previewImage.setAttribute('data-fullview', el.fullview);
-        previewImage.setAttribute('alt', el.alt);    
+        previewImage.setAttribute('alt', el.alt);  
         this.previewList.append(previewItem);
         previewItem.append(previewImage);
       }

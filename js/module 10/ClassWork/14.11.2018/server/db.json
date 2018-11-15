@@ -1,19 +1,39 @@
 {
   "tasks": [
     {
-      "text": "Кефір",
-      "id": 1
-    },
-    {
       "text": "Сало",
       "id": 3
     },
     {
-      "text": "Борщ",
+      "text": "Котлета",
       "id": 4
+    },
+    {
+      "text": "Rabbit",
+      "id": 8
+    },
+    {
+      "text": "Cat",
+      "id": 9
+    },
+    {
+      "text": "Dog",
+      "id": 10
+    },
+    {
+      "text": "Poly",
+      "id": 11
+    },
+    {
+      "text": "Miss",
+      "id": 12
+    },
+    {
+      "text": "Rose",
+      "id": 13
     }
   ],
   "complite": {
-    "new" :{}
+    "new": {}
   }
 }
