@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="result-templ"></div>
+    <!-- <template id="adress-template">
+        <p> You can find me in {{city}}. My adress is {{number}} {{street}}.</p>
+    </template> -->
+
+    <!-- <template id="task1-templ">
+        <h2>Мы используем шаблонизатор {{title}}</h1>
+        <p>В этом шаблонизаторе есть дополнительные функции {{helpers}} </p>
+        <p>Сейчас мы используем функцию {{func}}</p>
+    </template> -->
+
+    <!-- <template id="expl-templ2">
+        {{#each people}}
+        <p>{{firstName}} {{lastName}}</p>
+        {{/each}}
+
+        {{#each temp}}
+        <p>{{this}}</p>
+        {{/each}}
+    </template> -->
+
+    <!-- <template id="expl-templ3">
+         <h2>{{title}}</h2>
+     <ul>
+          {{#each items}}
+        <li>{{this}}</li>
+        {{/each}} 
+     </ul>
+    </template> -->
+
+    <!-- <template id="expl-templ4">
+            {{#each animals}}
+            <p>
+                The {{name}} says
+                {{#if noise}}
+                "{{noise}}".
+                {{else}}
+                nothing since its a {{name}}.
+                {{/if}}
+            </p>
+            {{/each}}
+        </template> -->
+<div class="gallery"></div>
+
+<!-- 5 -->
+<div class="gallery">
+        <div class="gallery-content">
+            <!-- шаблон -->
+            <template id="expl-templ5">
+             <h2 class="gallery-title">{{title}}</h2>
+
+            <!-- Розмножити each --> 
+            <div class="gallery-content">
+                    {{#each items}}
+                    <div class="gallery-item">
+                        <img class="gallery-img" src="{{img}}" alt="{{text}}">
+                        <p class="gallery-text">{{text}}</p>
+                    </div>
+                    {{/each}} 
+            </div>
+            </template>
+            <!-- кінець шаблона -->
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

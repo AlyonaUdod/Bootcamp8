@@ -95,7 +95,6 @@ class Stopwatch {
     this.timerId;
     this.deltaTime;
     this.lapsArr = [];
-
     this.createStopwatch = this.createStopwatch.bind(this);
     this.start = this.start.bind(this);
     this.lap = this.lap.bind(this);
@@ -103,6 +102,7 @@ class Stopwatch {
     this.calculateTime = this.calculateTime.bind(this);
     this.updateClockface = this.updateClockface.bind(this);
     this.getFormattedTime = this.getFormattedTime.bind(this); 
+    window.addEventListener('DOMContentLoaded', this.createStopwatch);
     }
 
     createStopwatch () {
@@ -118,19 +118,19 @@ class Stopwatch {
       this.btnStop.classList.add('js-reset');
       this.btnStop.setAttribute('disabled', 'disabled')
       this.btnStop.classList.add('btn');
-
       this.time.textContent = '00:00:0';
       this.smTime.textContent = '000';
       this.btnStart.textContent = 'start';
       this.btnLoop.textContent = 'lap';
       this.btnStop.textContent = 'reset';
-
       this.parent.append(this.wrap, this.btnStart, this.btnLoop, this.btnStop);
       this.wrap.append(this.time, this.smTime, this.lapsList,);
+      this.btnStart.addEventListener('click', this.start)
+      this.btnStop.addEventListener('click', this.stop);
+      this.btnLoop.addEventListener('click', this.lap);
     }
 
     start() {
-      console.log(this.startTime);
         if (this.isActive === false && this.startTime === undefined) {
           this.startTime = Date.now();
           this.isActive = true;
@@ -198,14 +198,5 @@ class Stopwatch {
 
 
 let sw1 = new Stopwatch(parentA);
-window.addEventListener('DOMContentLoaded', sw1.createStopwatch);
-sw1.btnStart.addEventListener('click', sw1.start)
-sw1.btnStop.addEventListener('click', sw1.stop);
-sw1.btnLoop.addEventListener('click', sw1.lap);
-
-
 // let sw2 = new Stopwatch(parentB);
-// window.addEventListener('DOMContentLoaded', sw2.createStopwatch);
-// sw2.btnStart.addEventListener('click', sw2.start)
-// sw2.btnStop.addEventListener('click', sw2.stop);
-// sw2.btnLoop.addEventListener('click', sw2.lap);
+

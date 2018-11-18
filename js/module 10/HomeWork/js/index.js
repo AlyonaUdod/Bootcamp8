@@ -34,7 +34,7 @@ let input2 = document.querySelector('[name="age"]');
 
 // 1 - getAllUsers()
 /////////////////////////////////////////////////////////////////////////////////////////
-// для этой функции используется только первое поле input
+// для этой функции используется submit
 function getAllUsers () {
     event.preventDefault();
     resultDiv.innerHTML = '';
