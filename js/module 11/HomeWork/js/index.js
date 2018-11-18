@@ -155,7 +155,7 @@ function sorry () {
 }
 
 
-// Функция фильтрации ноутбуков. Все варианты. 
+// Функция фильтрации ноутбуков. 
   function filteredLaptops () {
     event.preventDefault()
     container.innerHTML = '';
