@@ -25,7 +25,12 @@
 
 */
 
-let submitBtn = document.querySelector('.mdc-btn');
+let getAllUserBtn = document.querySelector('.getAlluser');
+let getUserByIdBtn = document.querySelector('.getUserById');
+let deleteUserBtn = document.querySelector('.deleteUser');
+let addUserBtn = document.querySelector('.addUser');
+let updateUserBtn = document.querySelector('.updateUser');
+
 let resultDiv = document.querySelector('.result');
 let form = document.querySelector('.search-form');
 let input = document.querySelector('[name="name"]');
@@ -75,7 +80,7 @@ function getAllUsers () {
             table.append(tr);
         }
     }
-form.addEventListener('submit', getAllUsers)
+getAllUserBtn.addEventListener('click', getAllUsers)
 
 
 // 2 - getUserById(id)
@@ -106,7 +111,7 @@ function getUserById() {
         
         wrap.append(id, name, age)
     }   
-// form.addEventListener('submit', getUserById)
+getUserByIdBtn.addEventListener('click', getUserById)
 
 
 //3 addUser()
@@ -131,7 +136,7 @@ function addUser(){
         .then(data => console.log(data))
         .catch(error => console.log('ERROR' + error));
     } 
-// form.addEventListener('submit', addUser)
+addUserBtn.addEventListener('click', addUser)
 
 
 // 4 removeUser()
@@ -148,7 +153,7 @@ function removeUser() {
       .then(() => console.log('success'))
       .catch(error => console.log('ERROR' + error));
 }
-// form.addEventListener('submit', removeUser)
+deleteUserBtn.addEventListener('click', removeUser)
 
 
 // 5 updateUser()
@@ -175,4 +180,4 @@ function updateUser() {
     .then(data => console.log(data))
     .catch(error => console.log('ERROR' + error));
 }
-// form.addEventListener('submit', updateUser)
+updateUserBtn.addEventListener('click', updateUser)

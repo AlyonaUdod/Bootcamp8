@@ -33,10 +33,10 @@
 }
 
 .search-form > button {
-    margin: 20px auto 0;
-    width: 130px;
+    margin: 10px auto 0;
+    width: 110px;
     padding: 5px 10px;
-    font-size: 20px;
+    font-size: 12px;
     text-transform: uppercase;
     background-color: white;
     color: rgb(70, 70, 70);
@@ -54,7 +54,7 @@
 }
 
 .result > table {
-    width: 400px;
+    width: 500px;
     margin: auto;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .result > div {
-    width: 400px;
+    width: 500px;
     margin: auto;
     padding: 20px 0;
 }
