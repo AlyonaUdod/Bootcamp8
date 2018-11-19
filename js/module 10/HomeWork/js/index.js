@@ -93,10 +93,13 @@ function getUserById() {
     .then(res => res.json())
     .then(data => showUserInfo(data.data))
     .catch(() => {
-        resultDiv.textContent = 'Такого пользователя в списке нет!'
+        resultDiv.textContent = 'Такого пользователя в списке нет! Введите валидное ID пользователя.'
     })
 }
-    function showUserInfo(obj) {
+    function showUserInfo(obj) { 
+      if (obj.length > 0) {
+        resultDiv.textContent = 'Введите валидное ID пользователя!'
+      } else {
         let wrap = document.createElement('div');
         resultDiv.append(wrap)
 
@@ -110,6 +113,7 @@ function getUserById() {
         age.textContent = `Age: ${obj.age}`;
         
         wrap.append(id, name, age)
+      }
     }   
 getUserByIdBtn.addEventListener('click', getUserById)
 
@@ -133,11 +137,20 @@ function addUser(){
           }
         })
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => successAdd(data))
         .catch(error => console.log('ERROR' + error));
     } 
 addUserBtn.addEventListener('click', addUser)
 
+function successAdd (data) {
+    if (data.status == 500) {
+        console.log(data);
+        resultDiv.textContent = 'Введите валидное имя пользователя(имя) и валидный возраст(число)!'
+    } else {     
+        console.log(data);
+        resultDiv.textContent = 'Пользователь успешно добавлен!'
+    }
+}
 
 // 4 removeUser()
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -145,16 +158,24 @@ addUserBtn.addEventListener('click', addUser)
 
 function removeUser() {
     event.preventDefault()
-    // console.log(input.value);
-    // let idDel = input.value;
     fetch(`https://test-users-api.herokuapp.com/users/${input.value}`, {
         method: 'DELETE'
       })
-      .then(() => console.log('success'))
+      .then(res => res.json())
+      .then((data) => successDelete(data))
       .catch(error => console.log('ERROR' + error));
 }
 deleteUserBtn.addEventListener('click', removeUser)
 
+function successDelete (data) {
+    if (data.data === null || data.status === 500 || data.status === 404) {
+        console.log(data.data);
+        resultDiv.textContent = 'Пользователя с таким ID не существует!'
+    } else {
+        console.log(data);
+        resultDiv.textContent = 'Пользователь успешно удален!'
+    }
+}
 
 // 5 updateUser()
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -168,7 +189,6 @@ function updateUser() {
         name: userName,
         age: userAge,
     }
-    console.log(obj);
     fetch(`https://test-users-api.herokuapp.com/users/${input.value}`, {
       method: 'PUT',
       body: JSON.stringify(obj),
@@ -177,7 +197,17 @@ function updateUser() {
       }
     })
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => successUpdate(data))
     .catch(error => console.log('ERROR' + error));
+}
+
+function successUpdate (data) {
+    if (data.status === 404) {
+        console.log(data.data);
+        resultDiv.textContent = 'Пользователя с таким ID не существует!'
+    } else {
+        console.log(data);
+        resultDiv.textContent = 'Данные пользователя успешно изменены!'
+    }
 }
 updateUserBtn.addEventListener('click', updateUser)
