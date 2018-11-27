@@ -77,7 +77,7 @@ function isUrlValid (event) {
 // функция отправляет запрос на сервер.
 function getInfoAboutLink (ev) {
   ev.preventDefault()
-  fetch(`http://api.linkpreview.net/?key=5bfda7235645423745dd9b252ba856cdd795b606a47ea&q=https://www.${input.value}`)
+  fetch(`https://api.linkpreview.net/?key=5bfda7235645423745dd9b252ba856cdd795b606a47ea&q=https://www.${input.value}`)
   .then(response => response.json())
   .then(data => addLinkToArr(data))
   .catch(err => console.log(err))

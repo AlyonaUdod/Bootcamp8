@@ -78,7 +78,7 @@ function isUrlValid(event) {
 // функция отправляет запрос на сервер.
 function getInfoAboutLink(ev) {
   ev.preventDefault();
-  fetch('http://api.linkpreview.net/?key=5bfda7235645423745dd9b252ba856cdd795b606a47ea&q=https://www.' + input.value).then(function (response) {
+  fetch('https://api.linkpreview.net/?key=5bfda7235645423745dd9b252ba856cdd795b606a47ea&q=https://www.' + input.value).then(function (response) {
     return response.json();
   }).then(function (data) {
     return addLinkToArr(data);
