@@ -52,14 +52,10 @@ var addCard = document.querySelector('.form__submit');
 var form = document.querySelector('.form');
 
 var divWrap = document.querySelector('.wrapper');
-
-// const divCard = document.querySelector('.card');
-// const btnDelete = document.querySelector('.delete');
-// const linkImg = document.querySelector('.link-img');
-// const link = document.querySelector('.card-link');
+var inputValue = void 0;
 
 // console.log(cardsArr)
-var regExp = /^[a-z]{1,}\.\w{2,3}/;
+var regExp = /^[a-z]{1,}\.[a-z]{1,}\.?\w{1,}([a-zA-Z0-9]{1,}|.?)?/;
 console.log(regExp);
 
 // функция проверки валидности введеного адреса
@@ -67,11 +63,11 @@ function isUrlValid(event) {
   event.preventDefault();
   var a = input.value;
   if (input.value.length === 0) {
-    alert('Please enter url!');
+    alert('Please enter url before adding card.');
   } else if (regExp.test(a)) {
     getInfoAboutLink(event);
   } else {
-    alert('Url is invalid!');
+    alert('Url is invalid! Enter valid url, please.');
   }
 }
 
@@ -90,9 +86,9 @@ addCard.addEventListener('click', isUrlValid);
 
 // функция обрабатывает ответ и, если такой адрес существует, добавляет карточку в массив.
 function addLinkToArr(data) {
-  console.log(data.error);
+  console.log(data);
   if (data.error === 424) {
-    alert('Url doesn\'t exist!');
+    alert('Sorry, my app can\'t create card without info from server. Please enter another url. Error: ' + data.description);
     form.reset();
   } else {
     form.reset();
@@ -111,7 +107,7 @@ function addLinkToArr(data) {
         createCard(data);
         localStorage.setItem('arrCards', JSON.stringify(cardsArr));
       } else {
-        alert('Закладка уже существует!');
+        alert('Card already exist! Please enter another url.');
       }
     } else {
       cardsArr.push(obj);
@@ -120,10 +116,6 @@ function addLinkToArr(data) {
     }
   }
 }
-
-// function addCardPainCard () {
-
-// }
 
 // функция с помощью шаблонизатора отрисовывет карточку на экране.
 function createCard(obj) {
@@ -135,11 +127,9 @@ function createCard(obj) {
 
 // функция удаляет карточки из списка закладок отображенных на экране и из массива всех закладок.
 function removeCard(event) {
-  // (event.target.parentNode)
-  // console.log([...event.target.parentNode.children][1].src)
   if (event.target.className === 'delete') {
     cardsArr = cardsArr.filter(function (el) {
-      return el.image !== [].concat(_toConsumableArray(event.target.parentNode.children))[1].src;
+      return el.url !== [].concat(_toConsumableArray(event.target.parentNode.children))[2].children[0].href;
     });
     event.target.parentNode.remove();
     localStorage.setItem('arrCards', JSON.stringify(cardsArr));
@@ -154,7 +144,7 @@ function isLocalStorageFull() {
   }
 }
 
-// если в LocalStorage усть массив с карточками - записываем его в нашу переменную-массив и отрисовываем карточки
+// если в LocalStorage eсть массив с карточками - записываем его в нашу переменную-массив и отрисовываем карточки
 function createCardsFromLocalStorage() {
   cardsArr = JSON.parse(localStorage.getItem('arrCards'));
   cardsArr.map(function (el) {
@@ -163,3 +153,50 @@ function createCardsFromLocalStorage() {
 }
 
 window.addEventListener('DOMContentLoaded', isLocalStorageFull);
+
+{
+  // думала заморочиться с http/https, отложила эту идею ввиду других заданий.
+  // let checkUrl1 = /^https\:\/\//
+  // let checkUrl2 = /^http\:\/\//
+  // let checkUrl3 = /^https\:\/\/www\./
+  // let checkUrl4 = /^http\:\/\/www\./
+
+  // function checkUrl (event) {
+  //   event.preventDefault()
+  //   let b = input.value
+  //   console.log(b)
+  //   if (checkUrl1.test(b)) {
+  //     let c = [...b].slice(8)
+  //     let e = c.join('');
+  //     inputValue = e;
+  //     if (regExp.test(e)){
+  //       getInfoAboutLink()
+  //     } 
+  //   } else if (checkUrl2.test(b)) {
+  //     let c = [...b].slice(7)
+  //     let e = c.join('');
+  //     inputValue = e;
+  //     if (regExp.test(e)){
+  //       getInfoAboutLink()
+  //     } 
+  //   } else if (checkUrl3.test(b)) {
+  //     let c = [...b].slice(12)
+  //     let e = c.join('');
+  //     inputValue = e;
+  //     if (regExp.test(e)){
+  //       getInfoAboutLink()
+  //     } 
+  //   } else if (checkUrl4.test(b)) {
+  //     let c = [...b].slice(11)
+  //     let e = c.join('');
+  //     inputValue = e;
+  //     if (regExp.test(e)){
+  //       getInfoAboutLink()
+  //     }  
+  //   } else if (regExp.test(b)){
+  //     console.log(b)
+  //     inputValue = b
+  //     getInfoAboutLink()
+  //   } 
+  // }
+}
