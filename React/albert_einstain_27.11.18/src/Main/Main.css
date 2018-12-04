@@ -1,0 +1,32 @@
+#link {
+    padding: 3rem;
+    padding-top: 0;
+    max-width: 360px;
+    margin: auto;
+  }
+  #link a {
+    position: relative;
+    font-family: "PT Serif", serif;
+    font-size: 1.6em;
+    padding: 1rem 2rem;
+    display: block;
+    text-align: center;
+    border-radius: 0.5rem;
+    color: #440467;
+    text-decoration: none;
+    -webkit-box-shadow: 0 0px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            box-shadow: 0 0px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background-color: #440467;
+    color: #FFD300;
+  }
+
+@media only screen and (min-width: 950px) {
+    #link a:hover {
+      -webkit-box-shadow: 0 0px 20px rgba(0, 0, 0, 0.38), 0 6px 6px rgba(0, 0, 0, 0.46);
+              box-shadow: 0 0px 20px rgba(0, 0, 0, 0.38), 0 6px 6px rgba(0, 0, 0, 0.46);
+    }
+    #link a:active {
+      -webkit-box-shadow: 0 0px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+              box-shadow: 0 0px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
+  }

@@ -9,9 +9,9 @@
 </head>
 <body>
     <div class="result-templ"></div>
-    <!-- <template id="adress-template">
+    <template id="adress-template">
         <p> You can find me in {{city}}. My adress is {{number}} {{street}}.</p>
-    </template> -->
+    </template>
 
     <!-- <template id="task1-templ">
         <h2>Мы используем шаблонизатор {{title}}</h1>
@@ -50,29 +50,40 @@
             </p>
             {{/each}}
         </template> -->
-<div class="gallery"></div>
+<!-- <div class="gallery"></div> -->
 
 <!-- 5 -->
-<div class="gallery">
-        <div class="gallery-content">
+<!-- <div class="gallery"> -->
+        <!-- <div class="gallery-content"> -->
             <!-- шаблон -->
-            <template id="expl-templ5">
-             <h2 class="gallery-title">{{title}}</h2>
+            <!-- <template id="expl-templ5"> -->
+             <!-- <h2 class="gallery-title">{{title}}</h2> -->
 
             <!-- Розмножити each --> 
-            <div class="gallery-content">
-                    {{#each items}}
-                    <div class="gallery-item">
-                        <img class="gallery-img" src="{{img}}" alt="{{text}}">
-                        <p class="gallery-text">{{text}}</p>
-                    </div>
-                    {{/each}} 
-            </div>
-            </template>
+            <!-- <div class="gallery-content"> -->
+                    <!-- {{#each items}} -->
+                    <!-- <div class="gallery-item"> -->
+                        <!-- <img class="gallery-img" src="{{img}}" alt="{{text}}"> -->
+                        <!-- <p class="gallery-text">{{text}}</p> -->
+                    <!-- </div> -->
+                    <!-- {{/each}}  -->
+            <!-- </div> -->
+            <!-- </template> -->
             <!-- кінець шаблона -->
-        </div>
-    </div>
+        <!-- </div> -->
+    <!-- </div> -->
 
+    <!-- Task 1 -->
+
+    <ul class="list"></ul>
+    <template id="tsk1">
+            {{#each data}}
+                    <li class="item">
+                        <p class="name">{{name}}</p>
+                        <span class="count">{{count}}</span>
+                    </li>
+            {{/each}}
+    </template>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="js/index.js"></script>
 </body>

@@ -1,0 +1,17 @@
+.news {
+    flex-basis: 75%;
+}
+
+.news div {
+    background: yellow;
+    border : 2px solid grey;
+    margin: 10px;
+}
+
+.news h2 {
+    margin: 20px;
+}
+
+.news p {
+    margin: 20px;
+}

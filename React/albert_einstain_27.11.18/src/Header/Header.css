@@ -1,0 +1,20 @@
+header {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0)), url("http://jonivainio-kaila.fi/freecodecamp/tribute/assets/img/header.jpg") center center/cover no-repeat;
+    height: 30rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3.2em;
+  color: white;
+}

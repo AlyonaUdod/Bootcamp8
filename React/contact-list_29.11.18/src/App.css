@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    width: 1000px;
+    margin: 10px auto;
+    /* display: flex; */
+    border: 1px solid black;
+}
+.button {
+    display: block;
+    width: 400px;
+    margin: 20px auto;
+    padding: 5px;
+}
+
+.addContact {
+    background: rgba(211, 211, 211, .2);
+    width: 95%;
+    margin: 20px auto;
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.allCards {
+    background: rgba(211, 211, 211, .2);
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-start;
+}

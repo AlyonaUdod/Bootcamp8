@@ -1,0 +1,28 @@
+.userInfo {
+    position: relative;
+    top: -150px;
+    padding: 20px;
+    /* margin-top: -200px; */
+    flex-basis: 25%;
+}
+
+.photo {
+
+    margin: auto;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    background-color: orange;
+    border: 5px solid white;
+}
+
+.name {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.nickname {
+    text-transform: capitalize;
+    text-align: center;
+    color: Red;
+}

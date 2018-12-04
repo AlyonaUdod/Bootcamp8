@@ -1,0 +1,26 @@
+#quote {
+    background-color: #440467;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  blockquote {
+    text-align: center;
+    color: #FFD300;
+    font-family: "Dancing Script", cursive;
+    font-size: 2.4em;
+    max-width: 240px;
+    padding: 4.5rem 0;
+  }
+
+  @media only screen and (min-width: 950px) {
+    blockquote {
+      max-width: 430px;
+    }
+  }

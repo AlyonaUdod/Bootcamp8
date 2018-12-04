@@ -1,0 +1,74 @@
+#first-row {
+    position: relative;
+    top: -3rem;
+  }
+  #img-div {
+    max-width: 400px;
+    margin: auto;
+  }
+  figure {
+    background-color: white;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0 0px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    padding: 1rem;
+    padding-bottom: 0;
+    margin: 0 3rem;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  figcaption {
+    font-family: "PT Serif", serif;
+    padding: 1rem 0;
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 1.2em;
+  }
+  #tribute-info p {
+    text-align: justify;
+    color: rgba(0, 0, 0, 0.75);
+    font-family: "PT Serif", serif;
+    font-size: 1.6em;
+    padding: 3rem;
+    padding-bottom: 0rem;
+  }
+  strong {
+    color: #20096A;
+  }
+
+
+  @media only screen and (min-width: 760px) {
+    #first-row {
+      top: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      max-width: 760px;
+      margin: auto;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+    #img-div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 345px;
+      flex: 0 0 345px;
+      margin: 4.5rem 1rem 4.5rem 0rem;
+    }
+    #tribute-info p {
+      padding: 0;
+      margin-right: 3rem;
+    }
+  }
+
+
+  @media only screen and (min-width: 950px) {
+    #first-row {
+      max-width: 950px;
+    }
+  }

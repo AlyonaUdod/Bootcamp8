@@ -1,0 +1,19 @@
+.card {
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px grey;
+}
+
+.card p, .card h3 {
+    width: 100%;
+}
+
+.del {
+    display: block;
+    text-align: right;
+    font-weight: 700;
+    cursor: pointer;
+    z-index:1;
+}

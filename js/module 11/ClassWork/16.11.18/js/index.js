@@ -116,8 +116,44 @@ const gallery = {
     ]
 };
 
-const source5 = document.querySelector("#expl-templ5").innerHTML.trim();
-const templ5 = Handlebars.compile(source5);
-const mark5 = templ5(gallery);
-let container = document.querySelector('.gallery-content')
-container.innerHTML = mark5;
+// const source5 = document.querySelector("#expl-templ5").innerHTML.trim();
+// const templ5 = Handlebars.compile(source5);
+// const mark5 = templ5(gallery);
+// let container = document.querySelector('.gallery-content')
+// container.innerHTML = mark5;
+
+
+
+////////////////////////////////////////////////////////////////////////
+// task 1 
+
+/*
+  К pen уже подключен Handlebars.
+  
+  Создайте шаблон списка указаного во вкладке HTML.
+  
+  Отрендерите список в DOM по данным из массива listItems.
+*/
+
+const listItems = [
+    { name: 'item 1', count: 2 },
+    { name: 'item 2', count: 4 },
+    { name: 'item 3', count: 12 },
+    { name: 'item 4', count: 29 },
+  ];
+
+let obj = {
+    data: listItems,
+}
+console.log(obj);
+
+const source6 = document.querySelector("#tsk1").innerHTML.trim();
+const templ6 = Handlebars.compile(source6);
+const mark6 = templ6(obj);
+let cont = document.querySelector('.list');
+cont.innerHTML = mark6; 
+
+
+////////////////////////////////////////////////////////////////////////
+// task 2 
+

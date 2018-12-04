@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #353535;
+}
+#root {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+  width: 100%;
+  display: flex;
+}
+
+.counter {
+  font-weight: 700;
+  color: black;
+  font-size: 22px;
+  margin: 20px;
+}
+
+.total {
+  font-weight: 700;
+  color: red;
+  font-size: 22px;
+  margin: 20px;
+}
+
+.cart {
+  background-color: #fff;
+  width: 250px;
+  height: 300px;
+  overflow-y: scroll;
+  border: 5px solid black;
+}
+
+span {
+  display: block;
+}
+
+.sum {
+  font-size: 20px;
+}

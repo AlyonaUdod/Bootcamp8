@@ -1,0 +1,55 @@
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,35,67,.5);
+}
+
+.modal {
+    background: white;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    /* height: 300px; */
+    border-radius: 5px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer; 
+}
+
+.form {
+    color: red;
+    margin: 10px;
+}
+
+.titleCard {
+    text-align: center;
+    margin: 10px;
+}
+
+.lab {
+    display: block;
+    margin: 40px;
+}
+
+.inp {
+    display: block;
+    margin: auto;
+    width: 400px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.but {
+    display: block;
+    margin: auto;
+    padding: 10px;
+}

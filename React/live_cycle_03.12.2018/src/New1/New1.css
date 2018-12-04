@@ -1,0 +1,44 @@
+.item {
+    font-size: 18px;
+    margin: 10px 0;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    list-style-type: none;
+}
+
+.item_open {
+    background-color:rgba(0, 0, 255, .2);
+}
+
+.cont{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.wrap {
+    margin: 10px 0;
+    display: none;
+}
+
+.wrap a {
+    display: block;
+    padding-right: 10px;
+    text-align: right;
+    text-decoration: none;
+    color: blue;
+}
+
+.open {
+    display: block;
+}
+
+.text {
+    display: block;
+    padding-left: 10px;
+}
+
