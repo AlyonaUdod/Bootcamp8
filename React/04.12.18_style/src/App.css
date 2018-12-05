@@ -1,0 +1,17 @@
+.wrap {
+    width: 90%;
+    border: 1px solid black;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    background-color: rgba(204, 204, 204, .5);
+}
+
+.cont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+}
+

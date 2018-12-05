@@ -1,0 +1,18 @@
+.button {
+    margin: 10px auto;   
+    display: block;
+    padding: 20px 16px;
+    background-color: yellowgreen;
+    color: #fff;
+    font-size: 12px;
+    transition: .5s;
+}
+
+.button:hover {
+    color: yellowgreen;
+    background-color: #fff;
+    /* font-size: 15px; */
+}
+
+
+
