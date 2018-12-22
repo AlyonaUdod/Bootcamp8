@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.App{
+    width: 80%;
+    margin: 1rem auto;
+    box-shadow: 0 0 1rem grey;
+    padding-bottom: 1rem;
+}
+
+.wrap {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-wrap {
+    width: 50%;
+    margin: auto;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.group {
+    justify-content: space-between;
+}

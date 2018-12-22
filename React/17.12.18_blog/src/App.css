@@ -1,0 +1,46 @@
+.App{
+    width: 80%;
+    margin: 1rem auto;
+    box-shadow: 0 0 1rem grey;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
+
+.form {
+    margin: 1rem auto;
+    width: 40%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form input {
+    padding: .5rem;
+}
+
+.btn {
+    display: block;
+}
+
+.card {
+    margin: 1rem 0;
+    box-shadow: 0 0 1rem grey;
+    text-align: center;
+    padding: 1rem;
+    flex-basis: 20%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card h3 {
+    color: grey;
+}

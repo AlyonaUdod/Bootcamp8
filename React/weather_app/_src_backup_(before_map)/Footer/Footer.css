@@ -1,0 +1,14 @@
+.Footer {
+    max-width: 64rem;
+    margin: auto;
+    width: 90%;
+    padding: .425rem 1%;
+    box-sizing: border-box;
+    border-radius: 1.5625rem;
+    background-color: rgb(227, 246, 255, .8);
+    box-shadow: .0625rem .0625rem .625rem grey;
+    min-height: 40%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+}

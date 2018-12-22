@@ -1,0 +1,17 @@
+.form {
+  margin: 2rem auto;   
+  width: 90%;
+}
+
+.input {
+    display: block;
+}
+
+.form-btn {
+  display: block;
+  margin: auto;
+}
+
+.form h3 {
+  text-align: center;
+}

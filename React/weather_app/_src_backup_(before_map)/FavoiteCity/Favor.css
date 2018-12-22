@@ -1,0 +1,20 @@
+.item {
+    transition: .5 linear;
+    background-color: rgba(199, 199, 199, .8);
+    padding: .1875rem .625rem .0625rem;
+    margin: .125rem;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 12.5rem;
+    border-radius: .625rem;
+}
+
+.item:hover {
+    background: linear-gradient(rgba(255,255,0,1),rgba(255, 175, 2, 1), rgba(255, 145, 2, 1));
+}
+
+.item img {
+    width: .9375rem;
+}

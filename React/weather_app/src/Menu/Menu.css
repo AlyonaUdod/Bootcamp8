@@ -1,0 +1,76 @@
+.list {
+    margin: 4rem auto 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;    
+}
+
+.items {
+    background-color: rgba(227, 246, 255, .8);
+    box-shadow: .1875rem -.1875rem .1875rem rgba(128, 128, 128, .5);
+    box-sizing: border-box;
+    border-radius: 1rem 1rem 0 0;
+    transition: .3 linear;
+}
+
+.items:hover {
+    box-shadow: .1875rem -.1875rem .375rem grey;
+}
+
+.list a {
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    color:rgb(70, 70, 70);
+    font-size: 1.28rem;
+    font-style: italic;    
+    display: block;
+    padding: .6rem .6rem .3rem;
+}
+
+.activeWindow {
+      background: linear-gradient(rgba(255,255,0,0.8),rgba(255, 175, 2, 0.925), rgba(255, 145, 2, 0.925));
+}
+
+
+@media (min-width: 480px) {
+    .list a {
+        padding: .8rem .9rem  .5rem;   
+    }
+}
+
+@media (min-width: 768px) {
+    .list {
+        justify-content: flex-start;
+        width: 80%;
+    }
+
+    .items {
+        margin-right: 3rem;
+        border-radius: 1.25rem 1.25rem 0 0;
+    }
+
+    .list a {
+        padding: .7rem .9rem .4rem; 
+        font-size: 1.32rem;  
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .list {
+        margin-top: 5rem;
+        max-width: 56.25rem;
+    }
+
+    .list a {
+        padding: .625rem 1.875rem;
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .list {
+        margin-top : 11vh;
+    }
+}

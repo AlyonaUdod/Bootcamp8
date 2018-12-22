@@ -1,0 +1,143 @@
+.weatherToday {
+    width: 80%;
+    margin: .625rem auto 1.25rem;
+    /* padding: .625rem 7%; */
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 1.5625rem;
+    box-shadow: 0 0 10px grey;
+    display: flex;
+    flex-flow: column wrap;
+    
+}
+.weatherTextInfo {
+    margin: auto;
+    padding: .625rem 7%;
+}
+.cloud {
+    text-align: center;
+    margin: .48rem auto;
+    padding-top: .625rem;
+    font-size: 1.5625rem;
+    font-weight: 700;
+    color: rgb(70,70,70);
+    text-shadow: .0625rem .0625rem .03125rem grey;
+    text-transform: capitalize;
+}
+
+.Temp {
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+
+.Icon, .TempP {
+    margin: auto;
+    display: block;
+}
+
+.quote {
+    display: none;
+}
+
+
+
+@media (min-width: 480px) {
+    .weatherToday {
+        width: 95%;
+        max-height: 17rem;
+        padding: .625rem 7%;    
+        max-width: 28rem;
+    }
+
+    .pressureInfo {
+        margin-top: 2.7rem;
+    }
+
+    .weatherTextInfo {
+        padding: 0 2%;
+    }
+}
+
+@media (min-width: 768px) {
+    .weatherToday {
+        width: 95%;
+        max-height: 17rem;
+        padding: .625rem 7%;    
+        max-width: 28rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        margin: auto;
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .weatherToday {
+        max-width: 15rem;
+        flex-basis: 43%;
+        padding: .625rem 3%;    
+        flex-flow: row wrap;
+        max-height: none;
+    }
+
+    .quote {
+        margin-left: 2rem;
+        display: block;
+        font-size: 1.7rem;
+        font-style: italic;
+        box-sizing: border-box;
+        flex-basis: 57%;
+    }
+    
+    .quote h3 {
+        text-align: center;
+        color: rgb(70,70,70);
+        
+    }
+    
+    .quote p {
+        text-indent: 5%;
+        border-radius: 1.25rem;
+        margin: 1.25rem;
+        color: grey;
+    }
+
+    .weatherTextInfo {
+        padding: 0 0;
+    }
+}
+
+
+@media (min-width: 1024px) {
+
+    .weatherToday {
+        max-width: 15rem;
+        margin: .625rem 1.25rem;
+        padding: .625rem 1.25rem;
+    }
+    
+    .container {
+        width: 90%;
+        justify-content: space-between;
+    }
+    
+    .quote {
+        font-size: 1.875rem;
+      flex-basis: 65%;
+    }
+    
+    .quote h3 {
+        text-align: center;
+        color: rgb(70,70,70);
+    }
+    
+    .quote p {
+        border-radius: 1.25rem;
+        margin: 1.25rem;
+        color: grey;
+    }   
+}

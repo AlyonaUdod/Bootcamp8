@@ -1,0 +1,26 @@
+.count {
+    font-weight: 700;
+    font-size: 20px;
+    font-family: serif;
+    text-align: center;
+}
+
+.button {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn {
+    flex-basis: 30%;
+    display: block;
+    background-color: aquamarine;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    outline: none;
+}
+
+

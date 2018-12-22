@@ -1,0 +1,23 @@
+.day-names {
+    color: #2875C7;
+    font-weight: bold;
+    cursor: default;
+    font-size: 1rem;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 35px;
+    border-left: solid 1px #CCCCCC;
+    cursor: pointer;
+    transition: all .2s;
+}

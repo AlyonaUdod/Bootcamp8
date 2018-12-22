@@ -1,0 +1,307 @@
+.Header {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    max-width: 64rem;
+    font-family: 'Josefin Sans', sans-serif; 
+}
+ 
+
+
+/* Form */
+
+.Form {
+    margin: 2rem auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.Form input {
+    width: 100%;
+    margin: .625rem auto;
+    padding: .625rem 1.25rem;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 .625rem grey;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: italic;
+    font-size: 1.3125rem;
+    font-weight: 500;
+    color: rgb(70,70,70);
+}
+
+.wrapInput {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    order: 2;
+}
+
+.wrapInput label {
+    width: 90%;
+    margin: auto;
+}
+
+
+/* Data */
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    order: 2;
+    position: relative;
+}
+
+.Date {
+    width: 80%;
+    order: 1;
+    margin: .3125rem auto;
+    padding:  1.25rem;
+    box-sizing: border-box;
+    border-radius: 1.5625rem;
+    background-color: rgb(227, 246, 255, .5);
+    box-shadow: 0 0 .625rem grey;
+}
+
+.Town {
+    font-size: 1.875rem;
+    font-weight: 700;   
+    margin: .3125rem 0; 
+}
+
+.Day, .Time {
+    font-size: 1.3125rem;
+    font-weight: 500;
+    margin: .625rem 0;
+    text-align: center;
+}
+
+.Time > span {
+    font-weight: 600;
+    font-size: 1.625rem;
+    margin: auto;
+}
+.Time {
+    width: 60%;
+    margin: auto;
+    display: none;
+}
+
+
+/* Favourite  */
+
+.Favourite {
+    width: 1.875rem;
+}   
+
+.showFavor{
+    position: absolute;
+    opacity: 0;
+    padding: 0 .4375rem;
+    transition: .3s linear;
+    font-style: italic;
+    color: rgb(70,70,70);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.1875rem;
+    font-weight: 600;
+    box-sizing: border-box;
+    width: 9.875rem; 
+    left: 20%;
+    top: .2rem;
+} 
+
+.imgTitle {
+    background-color:  rgb(255, 255, 255, .95); 
+    position: absolute;
+    width: 12.1875rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.125rem;
+    font-style: italic;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding: .3125rem .625rem;
+    border-radius: 1.25rem;
+    top: 1.875rem;
+    right: .9375rem;
+    opacity: 0;
+    transition: .2s linear;
+}
+
+.titleShow:hover .imgTitle {
+    opacity: 1;
+}
+
+.showFavor:after {
+    display: block;
+    position: reletive;
+    content: '';
+    width: 100%;
+    height: .15625rem;
+    background-color: rgb(70,70,70);  
+    opacity: 0;
+    transition: .2s linear;
+}
+
+.favorListHoverShow {
+    margin-left: 1.5rem;
+}
+
+.favorListHoverShow:hover >.showFavor, .favorListHoverShow:hover >.showFavor:after{
+    opacity: 1;
+}
+
+.favorList {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.3125rem;
+    font-weight: 500;
+    position: absolute;
+    top: 95%;
+    left: 10%;   
+    display: none;
+    transition: .4s linear;
+}
+
+.visible {
+    display: block;
+}
+
+.error {
+    opacity: 0;
+    position: absolute;
+    top: -35%;
+    left: 5%;
+    transition: .2s linear;
+    color: rgb(70,70,70);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.vis {
+    opacity: 1;
+}
+
+@media (min-width: 480px) {
+    .Form {
+        width: 90%;
+    }
+
+    .Date {
+        width: 70%; 
+    }
+
+    .favorListHoverShow {
+        margin-left: 3rem;
+    }
+
+    .favorList {
+        left: 18%;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .Header {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .wrapInput {
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        order: 1;
+        align-items: center;
+        margin: 0;
+        width: 60%;
+    }
+
+    .Date {
+        width: 30%;
+        margin: .3125rem 0;
+    }
+
+    .Time {
+        display: block;
+        width: 100%;
+    }
+
+    .Day, .Time {
+        text-align: start;
+    }
+
+    .Form {
+        margin: 2rem 0;
+        width: 70%;
+    }
+
+    .Form input {
+        width: 100%;
+    }
+
+    .Form label {
+        width: 100%;
+    }
+
+    .favorListHoverShow {
+        margin-left: .4rem;
+        margin-top: .4rem
+    }
+
+    .showFavor {
+        top: 25%;
+        left: 85%;
+    }
+
+    .Favourite {
+        margin-top: .15rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .Header {
+        max-width: 64rem;
+    }
+    
+    .Form {
+        margin: .625rem; 
+        width: 65%;
+    }
+    
+    .Date {
+        width: 33%;
+        background-color: rgb(227, 246, 255, .8);
+    }
+    
+    .Town {
+        margin-left: .5rem
+    }
+    
+    .Day, .Time {
+        text-align: start;
+    }
+    
+    .showFavor {
+        left: 100%; 
+        top: .8rem;
+    }
+
+    .imgTitle {
+        top: 2.2rem;
+        left: 4.1rem;
+    }
+
+    .error {
+        font-size: 1.1rem;
+    }
+}
+
+

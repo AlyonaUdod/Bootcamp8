@@ -1,0 +1,16 @@
+.day-month {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1;
+    height: 35px;
+    border-left: solid 1px #CCCCCC;
+    border-top: solid 1px #CCCCCC;
+    cursor: pointer;
+    transition: all .2s;
+    padding: 0 7px;
+}
+
+.day.different-month {
+    color: #C0C0C0;
+}

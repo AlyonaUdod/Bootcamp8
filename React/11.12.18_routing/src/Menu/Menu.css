@@ -1,0 +1,23 @@
+.list {
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    width: 700px;
+    list-style: none;
+    background-color: black;
+    box-sizing: border-box;
+}
+
+.list a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 12px;
+    display: block;
+}
+
+.list > li:hover {
+    background-color: red;
+}
