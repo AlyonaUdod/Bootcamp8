@@ -77,8 +77,6 @@
 }
 
 
-
-
 /* Data */
 
 .wrap {
@@ -121,7 +119,7 @@
 .Time {
     width: 60%;
     margin: auto;
-    display: none;
+    /* display: none; */
 }
 
 
@@ -264,7 +262,7 @@
     }
 
     .Time {
-        display: block;
+        /* display: block; */
         width: 100%;
     }
 

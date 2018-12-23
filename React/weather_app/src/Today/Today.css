@@ -59,15 +59,6 @@
 }
 
 @media (min-width: 768px) {
-    .weatherToday {
-        width: 95%;
-        max-height: 17rem;
-        padding: .625rem 7%;    
-        max-width: 28rem;
-    }
-}
-
-@media (min-width: 768px) {
     .container {
         margin: auto;
         width: 90%;
@@ -92,19 +83,6 @@
         box-sizing: border-box;
         flex-basis: 57%;
     }
-    
-    /* .quote h3 {
-        text-align: center;
-        color: rgb(70,70,70);
-        
-    }
-    
-    .quote p {
-        text-indent: 5%;
-        border-radius: 1.25rem;
-        margin: 1.25rem;
-        color: grey;
-    } */
 
     .weatherTextInfo {
         padding: 0 0;
@@ -115,7 +93,6 @@
 @media (min-width: 1024px) {
 
     .weatherToday {
-        max-width: 15rem;
         margin: .625rem 1.25rem;
         padding: .625rem 1.25rem;
     }

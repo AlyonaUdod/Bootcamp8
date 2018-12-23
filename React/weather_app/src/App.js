@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import axios from 'axios'
 import moment from 'moment'
+import tz from 'moment-timezone'
 
 import Header from './Header/Header.jsx'
 import Wrapper from './Wrapper/Wrapper.jsx'
@@ -22,9 +23,9 @@ export default class App extends Component {
     info: {}, // данные с сервера о погоде
     infoMoreDays: [],
     geo: {
-      time: moment().format('HH:mm:ss'),
-      day: moment().format('MMMM Do YYYY'),
-      weekDay: moment().format('dddd'),
+      time: moment().tz('Europe/Kiev').format('HH:mm:ss'),
+      day: moment().tz('Europe/Kiev').format('MMMM Do YYYY'),
+      weekDay: moment().tz('Europe/Kiev').format('dddd'),
       town: 'Kijv',
       country: 'UA',
       sunrise: '',
@@ -38,9 +39,9 @@ export default class App extends Component {
     fetchError: false, 
     listVisible: false,
     input: '',
-    quote: {},
     lat: 0,
     lng: 0,
+    timeZone: 'Europe/Kiev',
     href: localStorage.getItem('ActiveWindow') ? JSON.parse(localStorage.getItem('ActiveWindow')) : 'https://alyonaudod.github.io/Weather_App/',
   }
 
@@ -55,12 +56,13 @@ export default class App extends Component {
 
   componentDidMount () { 
     this.getInfoFromServer()
+    // this.getTime()
     setInterval(this.timeChange, 1000)
   }
 
   timeChange = () => {
     this.setState(prev =>({
-      geo: {...prev.geo, time: moment().format('HH:mm:ss'),}
+      geo: {...prev.geo, time: moment().tz(this.state.timeZone).format('HH:mm:ss'),}
     }))
   }
 
@@ -69,31 +71,43 @@ export default class App extends Component {
           e.preventDefault() 
       }
       const weatherFetch = axios.get(`https://api.openweathermap.org/data/2.5/weather?APPID=7ed6ba32164c3f1c39aaeeecdc77928f&q=${`${this.state.input}`|| 'Kiev'}&units=metric`)
-      // const pictureFetch = axios.get(`https://talaikis.com/api/quotes/random/`)
-
     Promise.all([weatherFetch])
-       .then(data => this.pushInfoToState(data))
+       .then(data => this.getTime(data))
        .catch(() => this.setState({
          fetchError: true
     }))
   }
 
-  pushInfoToState = async(data) => {
-    console.log(data)
-
-    let sR = moment(`"${data[0].data.sys.sunrise.toString()}"`, "X").format("HH:mm")
-    let sS =  moment(`"${data[0].data.sys.sunset.toString()}"`, "X").format("HH:mm")
+  getTime = (data) => {
     let lat = data[0].data.coord.lat
     let lng = data[0].data.coord.lon
-    // console.log(lat, lng)
+    const timeFetch = axios.get(`https://maps.googleapis.com/maps/api/timezone/json?location=${lat},${lng}&timestamp=1458000000&key=AIzaSyDEMcUM0qLC6x1-i8iPxRQW1e6dEzIIOrw`)
+    timeFetch
+    .then(info => this.pushInfoToState(data, info))
+    .catch(err => console.log(err))
+  }
+
+  pushInfoToState = (data, info) => {
+    console.log(data)
+    console.log(info)
+
+    let lat = data[0].data.coord.lat
+    let lng = data[0].data.coord.lon
+    let timeZone = info.data.timeZoneId
+
+    let sR = moment.tz(`"${data[0].data.sys.sunrise.toString()}"`, "X", timeZone).format("HH:mm")
+    let sS =  moment.tz(`"${data[0].data.sys.sunset.toString()}"`, "X", timeZone).format("HH:mm")
+    
     let iC = Icons.filter(el => el.name === data[0].data.weather[0].main)
     let bG = BG.filter(el => el.name === data[0].data.weather[0].main)
-    
+
     this.setState(prev =>({
       info: data[0].data,
-      // quote: data[1].data,
       backGround: bG.length !== 0 ? bG[0].src : BG[BG.length-1].src,
       geo: {...prev.geo, 
+        time: moment().tz(timeZone).format('HH:mm:ss'),
+        day: moment().tz(timeZone).format('MMMM Do YYYY'),
+        weekDay: moment().tz(timeZone).format('dddd'),
         town: data[0].data.name, 
         country: data[0].data.sys.country, 
         sunrise: sR, 
@@ -104,6 +118,7 @@ export default class App extends Component {
       fetchError: false,
       lat: lat,
       lng: lng,
+      timeZone: timeZone
     }))
   }
 
