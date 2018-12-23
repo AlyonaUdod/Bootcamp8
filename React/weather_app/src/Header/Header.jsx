@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import starFavor from './img/star.png'
 import starBlank from './img/star_black.png'
 import list from './img/noteList.png'
+import seach from './img/seach.png'
 
 import style from './Header.css'
 
@@ -20,17 +21,21 @@ const Header = ({time, day, weekDay, town, country, getInfo, inputChange, input,
              <form className={style.Form} onSubmit={getInfo}> 
                 <p className={fetchError || !valid ? `${style.error} ${style.vis}`: `${style.error}`}>
                  {fetchError && input ? `Enter correct city name, please` : !valid  && input ? 'Use english, please' : null} </p>
-                <label><input type="text" placeholder="Enter city name" value={input} onChange={inputChange}/></label>  
+                <label className={style.formInputs}>
+                   <input type="text" placeholder="Enter city name" value={input} onChange={inputChange}/> 
+                   <div className={style.seach}> 
+                      <img src={seach} alt="seach" onClick={getInfo}/> 
+                   </div>      
+                </label>  
             </form>
             <div className={`${style.modal} ${style.wrap}`}> 
                 <div className={style.favorListHoverShow}> 
                     <img src={list} alt="favourite" className={style.Favourite} onClick={showFavorList}/>
-                    <p className={`${style.showFavor}`} onClick={showFavorList}>Show Favourites</p>
+                    <p className={`${style.showFavor}`} onClick={showFavorList}>{listVisible ? 'Hide Favourites' : 'Show Favourites'}</p>
                 </div>
                 <ul className={listVisible ? `${style.favorList} ${style.visible}` : `${style.favorList}`}>
-                
-                    {favorList.map(el => <Favor name={el} key={el+el} func={showWeaterOnFavourite} remove={removeCity}/>)}
-                
+                    { favorList.length === 0 ? <li className={style.emptyList}> No Favourite City Yet. </li> :       
+                    favorList.map(el => <Favor name={el} key={el+el} func={showWeaterOnFavourite} remove={removeCity}/>)} 
                 </ul>
             </div>
         </div>

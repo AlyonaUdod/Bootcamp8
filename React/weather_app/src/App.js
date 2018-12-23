@@ -69,9 +69,9 @@ export default class App extends Component {
           e.preventDefault() 
       }
       const weatherFetch = axios.get(`https://api.openweathermap.org/data/2.5/weather?APPID=7ed6ba32164c3f1c39aaeeecdc77928f&q=${`${this.state.input}`|| 'Kiev'}&units=metric`)
-      const pictureFetch = axios.get(`https://talaikis.com/api/quotes/random/`)
+      // const pictureFetch = axios.get(`https://talaikis.com/api/quotes/random/`)
 
-    Promise.all([weatherFetch, pictureFetch])
+    Promise.all([weatherFetch])
        .then(data => this.pushInfoToState(data))
        .catch(() => this.setState({
          fetchError: true
@@ -91,7 +91,7 @@ export default class App extends Component {
     
     this.setState(prev =>({
       info: data[0].data,
-      quote: data[1].data,
+      // quote: data[1].data,
       backGround: bG.length !== 0 ? bG[0].src : BG[BG.length-1].src,
       geo: {...prev.geo, 
         town: data[0].data.name, 
@@ -160,7 +160,7 @@ export default class App extends Component {
 
   render() {
 
-    const {geo, favorList, input, listVisible, info, fetchError, valid, backGround, quote, href, lat, lng} = this.state   
+    const {geo, favorList, input, listVisible, info, fetchError, valid, backGround, href, lat, lng} = this.state   
 
     return (
 
@@ -177,7 +177,7 @@ export default class App extends Component {
         <Header time={geo.time} day={geo.day} weekDay={geo.weekDay} town={geo.town} country={geo.country} getInfo={this.getInfoFromServer} inputChange={this.inputChange} input={input} pushTownToFavourite={this.pushTownToFavourite} timeChange={this.timeChange} favorList={favorList} showFavorList={this.showFavorList} listVisible={listVisible} showWeaterOnFavourite={this.showWeaterOnFavourite} removeCity={this.removeCity} fetchError={fetchError} valid={valid}/> 
         <Menu colorToggle={this.changeColorOnItem} href={href}/>
         <Switch>
-          <Route exact path='/' render={() =>  <Today temp={info.main.temp} snow={info.weather[0].description} pressure={info.main.pressure} humidity={info.main.humidity} sunrise={geo.sunrise} sunset={geo.sunset} wind={info.wind.speed} icon={geo.icon} quote={quote.quote} author={quote.author} lat={lat} lng={lng} town={geo.town} country={geo.country}  />}/>
+          <Route exact path='/' render={() =>  <Today temp={info.main.temp} snow={info.weather[0].description} pressure={info.main.pressure} humidity={info.main.humidity} sunrise={geo.sunrise} sunset={geo.sunset} wind={info.wind.speed} icon={geo.icon} lat={lat} lng={lng} town={geo.town} country={geo.country}  />}/>
           <Route path='/moredays' render={() => <MoreDays town={geo.town}/>}/>
         </Switch>
 

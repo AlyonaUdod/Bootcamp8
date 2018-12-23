@@ -19,6 +19,25 @@
     width: 100%;
 }
 
+.seach {
+    box-shadow: 0 0 .625rem grey;
+    box-sizing: border-box;
+    border-radius: 0 1.25rem 1.25rem 0;
+    background-color: rgba(209, 209, 209, .8);
+}
+
+.seach img {
+    width: 1.8rem;
+    height: auto;
+    margin: .35rem .7rem .15rem .5rem;
+}
+
+.seach:hover {
+    /* box-shadow: .1875rem -.1875rem .375rem grey; */
+     background: linear-gradient(rgba(255,255,0,1),rgba(255, 175, 2, 1), rgba(255, 145, 2, 1));
+}
+
+
 .Form input {
     width: 100%;
     margin: .625rem auto;
@@ -26,7 +45,7 @@
     outline: none;
     border: none;
     box-sizing: border-box;
-    border-radius: 1.25rem;
+    border-radius: 1.25rem 0 0 1.25rem;
     box-shadow: 0 0 .625rem grey;
     font-family: 'Josefin Sans', sans-serif;
     font-style: italic;
@@ -42,10 +61,22 @@
     order: 2;
 }
 
-.wrapInput label {
+.formInputs {
     width: 90%;
     margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row;
+    align-items: center;
 }
+
+.emptyList {
+    list-style-type: none;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+
 
 
 /* Data */
@@ -193,6 +224,10 @@
         width: 90%;
     }
 
+    .Form input {
+        width: 100%;
+    }
+
     .Date {
         width: 70%; 
     }
@@ -239,30 +274,34 @@
 
     .Form {
         margin: 2rem 0;
-        width: 70%;
+        width: 60%;
     }
 
     .Form input {
         width: 100%;
     }
 
-    .Form label {
+    .formInputs {
         width: 100%;
     }
 
     .favorListHoverShow {
-        margin-left: .4rem;
+        margin-left: .5rem;
         margin-top: .4rem
     }
 
     .showFavor {
         top: 25%;
-        left: 85%;
+        left: 90%;
     }
 
     .Favourite {
         margin-top: .15rem;
     }
+
+    .emptyList {
+        width: 11rem;
+    }  
 }
 
 @media (min-width: 1024px) {

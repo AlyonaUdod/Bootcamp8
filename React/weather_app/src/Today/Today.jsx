@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import MyMapComponent from '../Map/Map'
 import style from './Today.css'
 
-const Today = ({temp, snow, pressure, humidity, sunrise, sunset, wind, icon, quote, author, lat, lng, town, country}) => {
+const Today = ({temp, snow, pressure, humidity, sunrise, sunset, wind, icon, lat, lng, town, country}) => {
     // console.log(lat,lng)
     return (  
         <Footer>
@@ -24,8 +24,6 @@ const Today = ({temp, snow, pressure, humidity, sunrise, sunset, wind, icon, quo
                 </div>
                 <div className={style.quote}>
                     <MyMapComponent  lat={lat} lng={lng} town={town} country={country}/>
-                    {/* <h3>{author}</h3>
-                    <p> "{quote}"</p> */}
                 </div>
             </div>
            
@@ -44,8 +42,6 @@ Today.propTypes = {
     sunset: PropTypes.string.isRequired, 
     wind: PropTypes.number.isRequired, 
     icon: PropTypes.string.isRequired, 
-    quote: PropTypes.string.isRequired, 
-    author: PropTypes.string.isRequired,
     lat: PropTypes.number.isRequired, 
     lng: PropTypes.number.isRequired, 
     town:  PropTypes.string.isRequired, 
