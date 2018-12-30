@@ -15,6 +15,7 @@
 }
 
 .cloud {
+    min-width: 100%;
     text-align: center;
     margin: .48rem auto;
     padding-top: .625rem;

@@ -41,7 +41,7 @@
 .Form input {
     width: 100%;
     margin: .625rem auto;
-    padding: .625rem 1.25rem;
+    padding: .625rem 0 .625rem 1.25rem ;
     outline: none;
     border: none;
     box-sizing: border-box;
@@ -122,6 +122,31 @@
     /* display: none; */
 }
 
+.citiesList {
+    position: absolute;
+    top: 100%;
+    /* left: 5%; */
+    font-size: 1.3rem;
+    list-style: none,
+}
+
+.item {
+    transition: .5 linear;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, .95);
+    padding: .3rem 1rem .0625rem;
+    margin: .1rem 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: .625rem;
+}
+
+.item:hover {
+    background: linear-gradient(rgba(255,255,0,1),rgba(255, 175, 2, 1), rgba(255, 145, 2, 1));
+}
 
 /* Favourite  */
 

@@ -8,6 +8,7 @@ import Loader from 'react-loader-spinner'
 // import PropTypes from 'prop-types'
 import axios from 'axios'
 import moment from 'moment'
+// import tz from 'moment-timezone'
 import style from './MoreDays.css'
 // import rainbow from '../Bg/img_bg/rainbow_1280.jpg'
 
@@ -20,6 +21,7 @@ export default class MoreDays extends Component {
         infoMoreDays: [],
         chartData: {},
         weatherNow: {},
+        // minMaxTemp: [],
         isLoadingFive: true,
     }   
 
@@ -43,14 +45,22 @@ export default class MoreDays extends Component {
   
     getMoreDaysInfo = (data) => {
         let full = [];
-       
+        
         for ( let i=0; i < 5; i++) {
             let a = +moment().add(i, 'days').startOf('day').format('X');
             let b = +moment().add(i, 'days').endOf('day').format('X');
+            // console.log(a, b)
             let arr = []
             data.data.list.filter(el => el.dt > a && el.dt < b ? arr.push(el) : null);
             full.push(arr)
+            
         } 
+
+        // console.log(data)
+        // let minMaxTemp = [] 
+        // data.data.list.map(el => minMaxTemp.push({time: el.dt, min: el.main.temp_min, max: el.main.temp_max}))
+        // console.log(minMaxTemp)
+
 
         let chartData = {};
   
@@ -68,6 +78,7 @@ export default class MoreDays extends Component {
           infoMoreDays: full,
           infoOfDays: infoOfDays,
           chartData: chartData,
+        //   minMaxTemp: minMaxTemp,
           weatherNow: data.data.list[0],
           isLoadingFive: false,
           todayIcon: icon.length !== 0 ? icon[0].src : Icons[Icons.length-1].src,
@@ -94,9 +105,9 @@ export default class MoreDays extends Component {
         <Footer>
             <div className={style.wrap}>
                 <div className={style.wToday}> 
-                    <h3>{moment().format("ll")}</h3> 
-                    <h4>{moment().format("dddd")}</h4>
-                        <p className={style.now}>Now: <span>{Math.ceil(weatherNow.main.temp).toFixed(0)} </span>&deg;C.</p>
+                    <h3>{moment().tz(this.props.timeZone).format("ll")}</h3> 
+                    <h4>{moment().tz(this.props.timeZone).format("dddd")}</h4>
+                        <p className={style.now}>Now: <span>{Math.round(weatherNow.main.temp).toFixed(0)} </span>&deg;C.</p>
                         <img src={todayIcon} alt={weatherNow.weather[0].main}/>
                         <p className={style.cloud}>{weatherNow.weather[0].description}</p>
                     <div className={style.fullTextInfo}>

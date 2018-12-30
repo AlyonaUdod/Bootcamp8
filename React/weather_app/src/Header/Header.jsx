@@ -9,7 +9,7 @@ import seach from './img/seach.png'
 
 import style from './Header.css'
 
-const Header = ({time, day, weekDay, town, country, getInfo, inputChange, input, pushTownToFavourite, favorList, showFavorList, listVisible, showWeaterOnFavourite, removeCity, fetchError, valid}) => {
+const Header = ({time, day, weekDay, town, country, getInfo, inputChange, input, pushTownToFavourite, favorList, showFavorList, listVisible, showWeaterOnFavourite, removeCity, fetchError, valid, cities, citiesListFunc}) => {
 
     function getStar() {
         return favorList.includes(town) ? starFavor : starBlank
@@ -20,13 +20,16 @@ const Header = ({time, day, weekDay, town, country, getInfo, inputChange, input,
         <div className={style.wrapInput}>
              <form className={style.Form} onSubmit={getInfo}> 
                 <p className={fetchError || !valid ? `${style.error} ${style.vis}`: `${style.error}`}>
-                 {fetchError && input ? `Enter correct city name, please` : !valid  && input ? 'Use english, please' : null} </p>
+                 {fetchError && input ? `You can chose city on map` : !valid  && input ? 'Use english, please' : null} </p>
                 <label className={style.formInputs}>
-                   <input type="text" placeholder="Enter city name" value={input} onChange={inputChange}/> 
+                   <input type="text" placeholder="Enter city or Chose place on map" autoFocus={true} value={input} onChange={inputChange}/> 
                    <div className={style.seach}> 
                       <img src={seach} alt="seach" onClick={getInfo}/> 
-                   </div>      
+                   </div>     
                 </label>  
+                <ul className={style.citiesList}> 
+                    {cities.length > 0 && cities.length < 15 ? cities.map(el => <li key={el.id} className={style.item} onClick={() => citiesListFunc(el.coord.lat, el.coord.lon)}> {el.name}, {el.country} </li>) : cities.length === 0 ? <li className={style.item}> No city found </li> : null}   
+                </ul> 
             </form>
             <div className={`${style.modal} ${style.wrap}`}> 
                 <div className={style.favorListHoverShow}> 
@@ -35,16 +38,16 @@ const Header = ({time, day, weekDay, town, country, getInfo, inputChange, input,
                 </div>
                 <ul className={listVisible ? `${style.favorList} ${style.visible}` : `${style.favorList}`}>
                     { favorList.length === 0 ? <li className={style.emptyList}> No Favourite City Yet. </li> :       
-                    favorList.map(el => <Favor name={el} key={el+el} func={showWeaterOnFavourite} remove={removeCity}/>)} 
+                    favorList.map(el => <Favor name={el} key={el+el} func={showWeaterOnFavourite} remove={removeCity}/>)}
                 </ul>
             </div>
         </div>
            
             <div className={style.Date}>
                 <div className={style.wrap}>
-                    <h2 className={style.Town}>{town}, {country}</h2>
+                    <h2 className={style.Town}>{town ? town : 'Somewhere'}, {country ? country : 'Earth'}</h2>
                     <div className={`${style.modal} ${style.hoverShow} ${style.titleShow}`}>    
-                        <p className={`${style.imgTitle}`}>{  favorList.includes(town) ? 'Already in Favourite!' : 'Add to Favourite!'}</p>
+                        <p className={`${style.imgTitle}`}>{ favorList.includes(town) ? 'Already in Favourite!' : 'Add to Favourite!'}</p>
                         <img src={getStar()} alt="favourite" className={style.Favourite} onClick={pushTownToFavourite}/>
                     </div>
                 </div>      

@@ -12,8 +12,8 @@ const Clones = ({tempDay, snow, pressure, humidity, wind, src, date, tempNight})
         <div className={style.weather}> 
                 <h3>{moment(`"${date.toString()}"`, "X").format('ll')}</h3>
                 <h4>{moment(`"${date.toString()}"`, "X").format("dddd")}</h4>
-                <p>Day: <span>{Math.ceil(tempDay).toFixed()}</span> &deg;C.</p>
-                <p className={style.tempNight}>Night: <span>{Math.ceil(tempNight).toFixed()}</span> &deg;C.</p>  
+                <p>Day: <span>{Math.round(tempDay).toFixed()}</span> &deg;C.</p>
+                <p className={style.tempNight}>Night: <span>{Math.round(tempNight).toFixed()}</span> &deg;C.</p>  
                 <img src={iC[0].src} alt={iC[0].name}/>
                 <p className={style.cloud}>{snow}</p>
                 <div className={style.fullTextInfo}>

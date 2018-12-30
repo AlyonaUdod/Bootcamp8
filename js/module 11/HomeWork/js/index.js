@@ -292,3 +292,11 @@ function sorry () {
   window.addEventListener('DOMContentLoaded', createLaptopsGallery)
   btnFilter.addEventListener('click', filteredLaptops)
   btnReset.addEventListener('dblclick', createLaptopsGallery)
+
+
+
+
+
+
+
+  

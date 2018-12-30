@@ -145,3 +145,7 @@
         justify-content: space-evenly;    
     }
 }
+
+.chart {
+    overflow: auto;
+}

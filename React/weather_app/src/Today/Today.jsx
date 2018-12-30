@@ -2,16 +2,17 @@ import React from 'react';
 import Footer from '../Footer/Footer.jsx'
 import PropTypes from 'prop-types'
 import MyMapComponent from '../Map/Map'
+// import MapWithASearchBox from '../Map/Map_test'
 import style from './Today.css'
 
-const Today = ({temp, snow, pressure, humidity, sunrise, sunset, wind, icon, lat, lng, town, country}) => {
+const Today = ({temp, snow, pressure, humidity, sunrise, sunset, wind, icon, lat, lng, town, country, getInfo}) => {
     // console.log(lat,lng)
     return (  
         <Footer>
             <div className={style.container}>
                 <div className={style.weatherToday}> 
                     <p className={style.cloud}>{snow}</p>
-                    <p className={style.TempP}>Temperature:  <span className={style.Temp}>{Math.ceil(temp).toFixed(0)}</span>&deg;C.</p>
+                    <p className={style.TempP}>Temperature:  <span className={style.Temp}>{Math.round(temp).toFixed(0)}</span>&deg;C.</p>
                     <img className={style.Icon} src={icon} alt={snow}/>
                     <div className={style.weatherTextInfo}>
                          <p>Pressure: {(pressure/1.33).toFixed(0)} mm Hg.</p>
@@ -23,7 +24,8 @@ const Today = ({temp, snow, pressure, humidity, sunrise, sunset, wind, icon, lat
                    
                 </div>
                 <div className={style.quote}>
-                    <MyMapComponent  lat={lat} lng={lng} town={town} country={country}/>
+                    {/* <MapWithASearchBox /> */}
+                    <MyMapComponent  lat={lat} lng={lng} town={town} country={country} getInfo={getInfo}/>
                 </div>
             </div>
            
@@ -46,4 +48,5 @@ Today.propTypes = {
     lng: PropTypes.number.isRequired, 
     town:  PropTypes.string.isRequired, 
     country: PropTypes.string.isRequired, 
+    getInfo: PropTypes.func.isRequired,
 }
