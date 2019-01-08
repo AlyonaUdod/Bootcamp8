@@ -125,9 +125,10 @@
 .citiesList {
     position: absolute;
     top: 100%;
-    /* left: 5%; */
+    left: 5%;
     font-size: 1.3rem;
-    list-style: none,
+    list-style: none;
+    z-index: 100000
 }
 
 .item {
@@ -325,6 +326,10 @@
     .emptyList {
         width: 11rem;
     }  
+
+    .citiesList{
+        left: 0;
+    }
 }
 
 @media (min-width: 1024px) {

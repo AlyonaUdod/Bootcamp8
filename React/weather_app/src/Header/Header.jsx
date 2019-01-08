@@ -15,6 +15,8 @@ const Header = ({time, day, weekDay, town, country, getInfo, inputChange, input,
         return favorList.includes(town) ? starFavor : starBlank
     }
 
+    // console.log(input.length)
+
     return (
         <div className={style.Header}>
         <div className={style.wrapInput}>
@@ -22,13 +24,13 @@ const Header = ({time, day, weekDay, town, country, getInfo, inputChange, input,
                 <p className={fetchError || !valid ? `${style.error} ${style.vis}`: `${style.error}`}>
                  {fetchError && input ? `You can chose city on map` : !valid  && input ? 'Use english, please' : null} </p>
                 <label className={style.formInputs}>
-                   <input type="text" placeholder="Enter city or Chose place on map" autoFocus={true} value={input} onChange={inputChange}/> 
+                   <input type="text" placeholder="Enter city or click on map" autoFocus={true} value={input} onChange={inputChange}/> 
                    <div className={style.seach}> 
                       <img src={seach} alt="seach" onClick={getInfo}/> 
                    </div>     
                 </label>  
                 <ul className={style.citiesList}> 
-                    {cities.length > 0 && cities.length < 15 ? cities.map(el => <li key={el.id} className={style.item} onClick={() => citiesListFunc(el.coord.lat, el.coord.lon)}> {el.name}, {el.country} </li>) : cities.length === 0 ? <li className={style.item}> No city found </li> : null}   
+                    {cities.length !== undefined && cities.length < 20 ? cities.map(el => input.length === 0 && el.city === '%s' ? null : <li key={el.city+el.id} className={style.item} onClick={() => citiesListFunc(el.lat, el.lon)}>{el.city === '%s' ? 'Seaching...' : el.city === '' ?  'No city found, try to find city on map.' : el.city}</li>) : null}   
                 </ul> 
             </form>
             <div className={`${style.modal} ${style.wrap}`}> 
@@ -77,4 +79,13 @@ Header.propTypes = {
     removeCity: PropTypes.func.isRequired, 
     fetchError: PropTypes.bool.isRequired, 
     valid: PropTypes.bool.isRequired,
+    // cities:  PropTypes.number, // я не понимаю, что писать. Изначально это число, но после получения результата запроса это массив с объектами, в объектах значения - строки и числа.   
+    citiesListFunc: PropTypes.func.isRequired,
 }
+
+
+// cities: PropTypes.arrayOf(PropTypes.shape({
+//     city: PropTypes.string,  
+//     lon: PropTypes.number,  
+//     lat: PropTypes.number,  
+// })) 

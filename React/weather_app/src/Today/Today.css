@@ -57,6 +57,10 @@
     .weatherTextInfo {
         padding: 0 2%;
     }
+
+    .cloud {
+         min-width: 0;
+    }
 }
 
 @media (min-width: 768px) {
@@ -74,6 +78,10 @@
         padding: .625rem 3%;    
         flex-flow: row wrap;
         max-height: none;
+    }
+
+    .cloud {
+         min-width: 100%;
     }
 
     .quote {
